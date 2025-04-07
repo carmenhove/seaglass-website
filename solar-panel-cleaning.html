@@ -1,0 +1,120 @@
+
+<!-- Multi-page website so that we can customize SEO for each of our services and retain individualized landing pages for Google Ads. -->
+<!-- Media queries are "if, then" statements for styling so that design can respond to different viewports -->
+
+
+<!-- This is an HTML5 document type -->
+<!DOCTYPE html>
+
+<!-- html is the root element, best practice is to specify language -->
+<html lan="en">
+    <!-- head contains meta data: information for machine processing, not human-readability.  -->
+    <head>
+        <!-- sets the character coding -->
+        <meta charset="utf-8"/>
+        <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- document title -->
+        <title> Solar Panel Cleaning </title>
+        <!-- set the base html -->
+         <!-- <base href="https://www.seaglasscleaningservices.com"> -->
+          <!-- link to css file for formating -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+    <!-- body is where the visible text body of the specific page begins -->
+    <body>
+                <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+                <header>
+                    <div class="logo">
+                      <img src="images/transparent-logo.svg" alt="Company Logo">
+                    </div>
+                  
+                    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                  
+                    <nav class="primary-navigation" id="navMenu">
+                      <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+                            <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+                            <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                            <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                      </ul>
+                    </nav>
+                  </header>
+                  
+                  <script>
+                    function toggleMenu() {
+                      document.getElementById('navMenu').classList.toggle('active');
+                    }
+                  
+                    function toggleDropdown(event) {
+                      const isMobile = window.innerWidth <= 600;
+                      if (isMobile) {
+                        event.preventDefault();
+                        const parent = event.target.closest('.dropdown');
+                        parent.classList.toggle('open');
+                      }
+                    }
+                  </script>
+
+        <main>
+            <!-- Overview -->
+            <section>
+                <section class="overview-service-page">
+                    <h1>Solar Panel Cleaning</h1>
+                    <p>Non-abrasive approach for enhanced solar panel performance</p>
+                </section>
+    
+                <div class="request-bid">
+                    <p>Request a <strong>free estimate</strong> by calling or texting us at <strong><a href="tel:360-209-2125">(360) 209-2125</a></strong> or by submitting an <strong><a href = "contact.html">online request form.</a></strong></p>
+                </div>
+            </section>
+    
+            <section>
+                <div class="two-column-layout">
+                    <div>
+                        <img src="images/after-solar-canva.jpg" alt="">
+                        <!-- <figcaption>After roof and window cleaning.</figcaption> -->
+                    </div>
+                    <div>
+                        <img src="images/before-solar-canva.jpg" alt="">
+                        <!-- <figcaption>Before roof and window cleaning.</figcaption> -->
+                    </div>
+                </div>
+                <!-- photos here -->
+            </section>
+    
+                <section class="our-process">
+                    <h2> Our process </h2>
+                    <p>We use non abrasive methods. Due to our local climate, the degree of tree cover, and proximity to waterfront across most buildings in Kitsap County, we find that solar panels in our area generally need more regular cleanings than those in other climates. If you've noticed grime on your panels or a decrease in their efficiency, contact us today and schedule a free estimate. We are fully equiped to get your solar panels back to 100% operating capacity using non-abrasive cleaning methods.</p>
+                </section>
+    
+                <section>
+                    <h2>Client Testimonials</h2>
+                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                    <div class="elfsight-app-dd37e448-f51b-4f67-9e2e-844d3d7fc97c" data-elfsight-app-lazy></div>
+    
+                </section>
+
+            <!-- FAQs -->
+            <section>
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <h3> Do solar panels actually need to be cleaned?</h3>
+            
+                <p> If your home is situated close to a lot of trees, a busy road, or waterfront then it's more likely that your solar panels will benefit from regular cleaning. Bird droppings, in particular, pose a unique threat to the integrity of solar panels because of the acidity. If a lot of debris has accumulated on your panels, having them professionally cleaned may result in at least a 6% increase in efficiency <a href="https://www.youtube.com/watch?v=Qzoto1UDsVQ" target="_blank">based on user research</a>. If your roof pitch is fairly steep and your home is not close to trees, waterfront, or a busy road, then your solar panels may only need infrequent cleaning based on the results of a <a href="https://jacobsschool.ucsd.edu/news/release/1393?id=1393" target="_blank">study out of UC San Diego</a>. Rest assured that we will never try to sell you on something you don't need. You also have the power to evaluate the effects of any professional cleanings that you pay for using your monthly energy data.</p>
+            
+                <h3> Can I clean my solar panels by myself? </h3>
+                <p>To clean any roof-mounted solar panels, we always recommend hiring a professional. To safely clean a rooftop solar panel you need training, experience,  and specialized equipment (e.g., poles, cleaning equipment, work boots with appropriate tread, a safety harness and rope, ladders, ladder stand-offs, and ladder stabilizers). Due to the equipment needed and the risk involved, it is much faster, safer, and more cost-effective to hire a licensed and insured professional. In the USA alone, <a href="https://blogs.cdc.gov/niosh-science-blog/2017/03/13/ladder-safety-month/#:~:text=March%20is%20the%20first%2Dever,2%20from%20ladder%2Drelated%20injuries." target="_blank"> over half a million people</a> are admitted to the emergency room every year for ladder related injuries.</p>
+            </section>
+        </main>
+    </body>
+</html>

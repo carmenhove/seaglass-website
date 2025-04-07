@@ -1,0 +1,191 @@
+
+<!-- Multi-page website so that we can customize SEO for each of our services and retain individualized landing pages for Google Ads. -->
+<!-- Media queries are "if, then" statements for styling so that design can respond to different viewports -->
+
+<!-- This is an HTML5 document type -->
+<!DOCTYPE html>
+
+<!-- html is the root element, best practice is to specify language -->
+<html lan="en">
+    <!-- head contains meta data: information for machine processing, not human-readability.  -->
+    <head>
+        <!-- sets the character coding -->
+        <meta charset="utf-8"/>
+        <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- document title -->
+        <title> SeaGlass Cleaning Services </title>
+        <!-- set the base html -->
+         <!-- <base href="https://www.seaglasscleaningservices.com"> -->
+          <!-- link to css file for formating -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <!-- body is where the visible text body of the specific page begins -->
+    <body>
+                <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+                <header>
+                    <div class="logo">
+                      <img src="images/transparent-logo.svg" alt="Company Logo">
+                    </div>
+                  
+                    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                  
+                    <nav class="primary-navigation" id="navMenu">
+                      <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+                            <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+                            <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                            <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                      </ul>
+                    </nav>
+                  </header>
+                  
+                  <script>
+                    function toggleMenu() {
+                      document.getElementById('navMenu').classList.toggle('active');
+                    }
+                  
+                    function toggleDropdown(event) {
+                      const isMobile = window.innerWidth <= 600;
+                      if (isMobile) {
+                        event.preventDefault();
+                        const parent = event.target.closest('.dropdown');
+                        parent.classList.toggle('open');
+                      }
+                    }
+                  </script>
+        
+
+    <!-- Begin main content -->
+        <main>
+
+            <!-- Overview -->
+            <section id="overview"> 
+                <!-- Only one h1 per page -->
+                <h1> SeaGlass Cleaning Services, LLC </h1>
+                <p> We are a locally owned and operated small business serving residential and commercial clients across Kitsap County. From routine maintenance to storm and construction clean-up, our home services will enhance your home’s beauty and protect it for years to come. </p>
+                <!-- <img src="images/team_rambo.jpg" alt="clean windows"> -->
+            </section>
+            
+            <!--  What we promise-->
+            <section id="guarantees">
+                <h2> What we promise </h2>
+                <ul>
+                    <li> We perform every job to the level that we would expect as paying clients.  </li>
+                    <li> We never upsell you on something you don’t need. </li>
+                    <li> We give honest recommendations, even if they involve hiring someone else. </li>
+                </ul>
+                <!-- <img src="images/rambo.jpg" alt="clean windows"> -->
+            </section>
+
+            <!-- Practice background image -->
+            <!-- <section>
+                <div class="windows-practice">
+                    <h2>Window Cleaning Services</h2>
+                    <p>This is an example sentence</p>
+                </div>
+
+            </section> -->
+            
+            <!--  Services -->
+            <section id="services-section">
+                <h2>Our Services</h2>
+
+                <div class="two-column-layout">
+                    <div id="windows">
+                        <div class="service-title"> 
+                            <h3><a href = "window-cleaning.html">Window Cleaning</a></h3>
+                        </div>
+                        <!-- <div class="service-description">
+                            <p> Interior and exterior panes. Includes screens, sills, and exterior tracks.</p>
+                        </div> -->
+                    </div>
+
+                    <div id="roofs-gutters">
+                        <div class="service-title"> 
+                            <h3><a href ="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></h3>
+                        </div>
+                        <!-- <div class="service-description">
+                            <p> Debris removal without the mess. </p>
+                        </div> -->
+                    </div>
+
+                    <div id="moss-treatment">
+                        <div class="service-title"> 
+                            <h3><a href ="moss-removal.html">Moss Removal and Treatment</a></h3>
+                        </div>
+                        <!-- <div class="service-description">
+                            <p> Environmentally friendly. </p>
+                        </div> -->
+                    </div>
+
+                    <div id="solar-panels">
+                        <div class="service-title"> 
+                            <h3><a href ="solar-panel-cleaning.html">Solar Panel Cleaning</a></h3>
+                        </div>
+                        <!-- <div class="service-description">
+                            <p> Yee haw. </p>
+                        </div> -->
+                    </div>
+
+                </div>
+
+                <!-- <ul>
+                    <li><a href = "window-cleaning.html">Professional Window Cleaning</a></li>
+                    <li><a href = "roof-gutter-cleaning.html">Professional Roof and Gutter Cleaning</a></li>
+                    <li><a href = "moss-removal.html">Professional Roof Moss Removal and Treatment</a></li>
+                    <li><a href = "solar-panel-cleaning.html">Professional Solar Panel Cleaning</a></li>
+                </ul> -->
+            </section>
+
+            <!-- Service Area -->
+            <section>
+                <h2> Service Areas </h2>
+                <p> We serve Kitsap County, including the following locations:</p>
+                <div class="two-column-layout">
+                    <div>
+                        <ul>
+                            <li>Bainbridge Island, WA</li>
+                            <li>Kingston, WA</li>
+                            <li>Bremerton, WA</li>
+                            <li>Poulsbo, WA</li>
+                            <li>Silverdale, WA</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Indianola, WA </li>
+                            <li>Gig Harbor, WA</li>
+                            <li>Manchester, WA</li>
+                            <li>Suquamish, WA </li>
+                            <li>Port Orchard, WA</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d703150.8526899233!2d-122.9665516!3d47.5276059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7d9b1c58aa47781%3A0x4adfa91d2ce15357!2sSeaGlass%20Window%20Cleaning%2C%20LLC!5e1!3m2!1sen!2sus!4v1724444921478!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </section>
+            
+        <!-- Testimonials -->
+            <section>
+                <h2> Customer Testimonials </h2>
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-0b1fa711-9ab9-4a09-aa8c-d95d82508d44" data-elfsight-app-lazy></div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            &copy; Copywrite 2025 Reda Consulting <a href="privacy-policy.html"> Privacy Policy </a> | <a href="privacy-policy.html"> Careers
+        </footer>
+    </body>
+</html>

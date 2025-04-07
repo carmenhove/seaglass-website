@@ -1,0 +1,68 @@
+
+<!-- This is an HTML5 document type -->
+<!DOCTYPE html>
+
+<!-- html is the root element, best practice is to specify language -->
+<html lan="en">
+    <!-- head contains meta data, <head> primarily holds information for machine processing, not human-readability.  -->
+    <head>
+        <!-- sets the character coding -->
+        <meta charset="utf-8"/>
+        <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- document title -->
+        <title> Contact us </title>
+        <!-- set the base html -->
+         <!-- <base href="https://www.seaglasscleaningservices.com"> -->
+          <!-- link to css file for formating -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+<!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+    <body>
+                <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+                <header>
+                    <div class="logo">
+                      <img src="images/transparent-logo.svg" alt="Company Logo">
+                    </div>
+                  
+                    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                  
+                    <nav class="primary-navigation" id="navMenu">
+                      <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+                            <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+                            <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                            <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                      </ul>
+                    </nav>
+                  </header>
+                  
+                  <script>
+                    function toggleMenu() {
+                      document.getElementById('navMenu').classList.toggle('active');
+                    }
+                  
+                    function toggleDropdown(event) {
+                      const isMobile = window.innerWidth <= 600;
+                      if (isMobile) {
+                        event.preventDefault();
+                        const parent = event.target.closest('.dropdown');
+                        parent.classList.toggle('open');
+                      }
+                    }
+                  </script>
+
+        <br><br><center><iframe src="https://www.thecustomerfactor.com/new/bid.php?id=c2VhZ2xhc3N3aW5kb3c=&c=VVM=" width="100%" height="650" frameborder="0" scrolling="auto"></iframe></center>
+
+       
+
+    </body>

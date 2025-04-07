@@ -1,0 +1,124 @@
+
+<!-- Multi-page website so that we can customize SEO for each of our services and retain individualized landing pages for Google Ads. -->
+<!-- Media queries are "if, then" statements for styling so that design can respond to different viewports -->
+
+<!-- This is an HTML5 document type -->
+<!DOCTYPE html>
+
+<!-- html is the root element, best practice is to specify language -->
+<html lan="en">
+    <!-- head contains meta data: information for machine processing, not human-readability.  -->
+    <head>
+        <!-- sets the character coding -->
+        <meta charset="utf-8"/>
+        <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- document title -->
+        <title> Moss Removal Services Kitsap </title>
+        <!-- set the base html -->
+         <!-- <base href="https://www.seaglasscleaningservices.com"> -->
+          <!-- link to css file for formating -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+    <!-- body is where the visible text body of the specific page begins -->
+    <body>
+                <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+                <header>
+                    <div class="logo">
+                      <img src="images/transparent-logo.svg" alt="Company Logo">
+                    </div>
+                  
+                    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                  
+                    <nav class="primary-navigation" id="navMenu">
+                      <ul class="main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+                            <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+                            <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                            <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                      </ul>
+                    </nav>
+                  </header>
+                  
+                  <script>
+                    function toggleMenu() {
+                      document.getElementById('navMenu').classList.toggle('active');
+                    }
+                  
+                    function toggleDropdown(event) {
+                      const isMobile = window.innerWidth <= 600;
+                      if (isMobile) {
+                        event.preventDefault();
+                        const parent = event.target.closest('.dropdown');
+                        parent.classList.toggle('open');
+                      }
+                    }
+                  </script>
+
+        <!-- Main content -->
+        <main>
+            <section>
+                <section class="overview-service-page">
+                    <h1>Environmentally Friendly Moss Removal</h1>
+                    <h2>Safe and effective moss treatment that kills and prevents moss</h2>
+                </section>
+    
+                <div class="request-bid">
+                    <p>Request a <strong>free estimate</strong> by calling or texting us at <strong><a href="tel:360-209-2125">(360) 209-2125</a></strong> or by submitting an <strong><a href = "contact.html">online request form.</a></strong></p>
+                </div>
+            </section>
+            
+            <!-- Overview -->
+            <section>
+                <p> If you see green stuff on your roof, you're not alone! Moss, algae, and mold are common problems in the Pacific Northwest. Due to our climate, moss grows rapidly on roof surfaces. When left unchecked, moss will shoot spores underneath the roof shingles, slowly pushing them upwards and eventually causing leaks. At SeaGlass, our moss removal and moss treatment services are a part of our comprehensive approach to <a href="roof-and-gutter-cleaning.html">roof and gutter cleaning</a>. Before applying a moss treatment, we always recommend blowing debris off the roof and cleaning your gutters and downspouts to get the most out of your service. Call us or request a free quote today! </p>
+            
+            </section>
+
+            <section>
+                <div class="two-column-layout">
+                    <div>
+                        <img src="images/moss-compressed.jpg" alt="">
+                        <!-- <figcaption>After roof and window cleaning.</figcaption> -->
+                    </div>
+                    <div>
+                        <img src="images/roof-treated.jpg" alt="">
+                        <!-- <figcaption>After roof and window cleaning.</figcaption> -->
+                    </div>
+                </div>
+                <!-- photos here -->
+            </section>
+
+            <section class="our-process">
+                <h2> Our process </h2>
+                <p>For all first-time cleanings, we use traditional cleaning methods (a ladder, squeegee, and hand-held applicator) to thoroughly clean and visually inspect each pane of glass. </p>
+                    
+                <p> If a regular maintenance schedule is implemented, we may also use a water-fed pole and a water filtering system to keep your exterior window panes clean (dependending on your window type). Before we leave every job, we'll give you a comprehensive assessment of any issues that we come across, such as scratches and failed seals. </p>
+            </section>
+
+            <!-- Frequently Asked Questions (SEO optimized to build authority) -->
+            <section>
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <h3> What is the best way to get moss off my roof?</h3>
+
+                <p>There are different schools of thought on the best way to remove moss. At SeaGlass, we opt for what we believe to be the safest and most effective <i>long-term</i> solution: <a href="https://dochub.clackamas.us/documents/drupal/ad9e796c-87d8-484e-ad9c-f464e5fef7f9" target="_blank">sodium bicarbonate</a>. Sodium bicarbonate, otherwise known as baking soda, kills moss and prevents future growth by altering the pH of the roof surface. Baking soda will not remove the moss all at once. After application, the moss will slowly die, turn brown, and flake off over time. If the moss is extensive, it will take multiple treatments to completely erradicate. Some folks opt for a more aggressive approach, which involves using brushes, pressure washers, or other tools to mechanically remove the moss - but this won't prevent future growth and can easily damage the shingles and void your roof warranty. Using harsher chemicals (especially those containing zinc) are effective at killing moss but can cause health problems for the person applying the treatment and the run-off is harmful to pets, plants, and wildlife. Simply put, we use baking soda to kill moss because it's effective and safer for people, pets, plants, and wildlife than the alternatives. </p>
+
+                <h3>Can I treat roof moss myself?</h3>
+                
+                <p>When it comes to moss removal and moss treatment, we strongly recommend that you leave it to the professionals. To safely apply a moss treatment to any roof, you need training and experience as well as specialized equipment (e.g., work boots with appropriate tread, a safety harness and rope, ladders, ladder stand-offs, ladder stabilizers). Due to the equipment needed and the risk involved, it is much faster, safer, and more cost-effective to hire a licensed and insured professional. In the USA alone, <a href="https://blogs.cdc.gov/niosh-science-blog/2017/03/13/ladder-safety-month/#:~:text=March%20is%20the%20first%2Dever,2%20from%20ladder%2Drelated%20injuries." target="_blank"> over half a million people</a> are admitted to the emergency room every year for ladder related injuries.</p>
+            </section>
+        </main>
+        
+        <footer>
+             &copy; Copywrite 2025 Reda Consulting
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+
+<!-- Multi-page website so that we can customize SEO for each of our services and retain individualized landing pages for Google Ads. -->
+<!-- Media queries are "if, then" statements for styling so that design can respond to different viewports -->
+
+
+<!-- This is an HTML5 document type -->
+<!DOCTYPE html>
+
+<!-- html is the root element, best practice is to specify language -->
+<html lan="en">
+    <!-- head contains meta data: information for machine processing, not human-readability.  -->
+    <head>
+        <!-- sets the character coding -->
+        <meta charset="utf-8"/>
+        <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- document title -->
+        <title> Roof and Gutter Cleaning </title>
+        <!-- set the base html -->
+         <!-- <base href="https://www.seaglasscleaningservices.com"> -->
+          <!-- link to css file for formating -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+    <!-- body is where the visible text body of the specific page begins -->
+    <body>
+        <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+        <header>
+            <div class="logo">
+              <img src="images/transparent-logo.svg" alt="Company Logo">
+            </div>
+          
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+          
+            <nav class="primary-navigation" id="navMenu">
+              <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+                    <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+                    <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                    <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </header>
+          
+          <script>
+            function toggleMenu() {
+              document.getElementById('navMenu').classList.toggle('active');
+            }
+          
+            function toggleDropdown(event) {
+              const isMobile = window.innerWidth <= 600;
+              if (isMobile) {
+                event.preventDefault();
+                const parent = event.target.closest('.dropdown');
+                parent.classList.toggle('open');
+              }
+            }
+          </script>
+
+        <!-- Main content -->
+         <main>
+        <!-- Overview -->
+            <section>
+                <section class="overview-service-page">
+                    <h1>Roof and Gutter Cleaning</h1>
+                    <p>Clogged gutters? Moss growing on your roof? Leaves piling up? We can help!</p>
+                </section>
+    
+                <div class="request-bid">
+                    <p>Request a <strong>free estimate</strong> by calling or texting us at <strong><a href="tel:360-209-2125">(360) 209-2125</a></strong> or by submitting an <strong><a href = "contact.html">online request form.</a></strong></p>
+                </div>
+            </section>
+    
+                <section>
+                    <div class="four-column-layout">
+                        <div>
+                            <img src="images/roof-before.jpg" alt="">
+                            <!-- <figcaption>Before roof and window cleaning.</figcaption> -->
+                        </div>
+                        <div>
+                            <img src="images/roof-after.jpg" alt="">
+                            <!-- <figcaption>After roof and window cleaning.</figcaption> -->
+                        </div>
+                        <div>
+                            <img src="images/before-gutters.jpg" alt="">
+                            <!-- <figcaption>Before roof and window cleaning.</figcaption> -->
+                        </div>
+                        <div>
+                            <img src="images/after-gutters.jpg" alt="">
+                            <!-- <figcaption>After roof and window cleaning.</figcaption> -->
+                        </div>
+                    </div>
+                    <!-- photos here -->
+                </section>
+    
+                <section class="our-process">
+                    <h2> Our process </h2>
+                    <p>We use a gas-powered blower to blow debris off the roof. Unless the debris in the gutters is completely dry, we clean out the gutters by hand. 
+                        
+                        Our roof and gutter cleaning services includes blowing debris off the roof, cleaning your gutters, checking and unclogging downspouts, and applying sodium bicarbonate (baking soda) to safely and effective remove moss from your roof.</p>
+                </section>
+    
+                <section>
+                    <h2>Client Testimonials</h2>
+                    <p>Thank you to our fantastic clients for helping us win #1 best gutter cleaners in Bremerton in 2024 and 2025</p>
+                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                    <div class="elfsight-app-dd37e448-f51b-4f67-9e2e-844d3d7fc97c" data-elfsight-app-lazy></div>
+    
+                </section>
+    
+            <!-- Optimized for SEO keywords, provides useful content for users based on common Google queries -->
+            <section>
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <h3> What are the benefits of having my roof and gutters professionally cleaned?</h3>
+                <p>Aside from providing shelter and insulation, the main purpose of a roof is to shed water and debris. The purpose of the gutter system is to then collect the water and debris coming off the roof and deposit it away from the building to prevent damage to the siding and the foundation. No matter how steep the pitch of the roof, debris (e.g., fir needles, pine cones, wet leaves) will still accumlate over time, which is why routine maintenance is crucial. Debris that sits on a roof for too long will eventually lead to rot and will encourage the growth of moss, algae, and mold. Likewise, gutters that are not regularly cleaned of debris will clog, pushing mud and rainwater back up under the shingles. Debris left in your gutters may even cause the underground drain pipes connected to your downspouts to clog, requiring a plumber and a big chunk of change.</p>
+         
+                <h3>Can I clean my roof and gutters myself?</h3>
+                <p>When it comes to roof and gutter cleaning, leave it to the professionals. To safely clean any roof, you need training and experience as well as specialized equipment (e.g., a gas or electric backpack blower, work boots with appropriate tread, a safety harness and rope, ladders, ladder stand-offs, ladder stabilizers, buckets, and a gutter spoon). Due to the equipment needed and the risk involved, it is much faster, safer, and more cost-effective to hire a licensed and insured professional. In the USA alone, <a href="https://blogs.cdc.gov/niosh-science-blog/2017/03/13/ladder-safety-month/#:~:text=March%20is%20the%20first%2Dever,2%20from%20ladder%2Drelated%20injuries." target="_blank"> over half a million people</a> are admitted to the emergency room every year for ladder related injuries. It's not worth the risk. </p>
+                
+                <h3> How much will it cost to get my roof and gutters cleaned?</h3>
+                <p>It depends, because every company has a different pricing structure and roof and gutter systems are unique to each building. At SeaGlass, we have a price per square foot for roof and gutter cleaning that varies depending on roof pitch, roof complexity (e.g., number of dormers, hips, and valleys), and gutter complexity. Schedule a quote and we'll evaluate the specifics of your home or business in-person. </p>
+                
+                <h3> Should I pressure wash my roof and gutters? </h3>
+                <p>No, don't pressure wash your roof and gutters! Pressure washers are amazing tools for cleaning solid non-porous surfaces, such as sidewalks and patios, but they can cause extensive damage to roof shingles, gutters, and soffit. Even if using a pressure washer doesn't cause immediately noticeable damage, it will almost always void the warranty on your roof. This is true even for metal roofs and means that you won't be covered in the event of storm damage, which is a significant risk here in the Pacific Northwest. Yikes!</p>
+        
+                <h3> How often should I have my roof and gutters cleaned? </h3>
+                <p>Generally speaking, we recommend getting your roof and gutters cleaned at least twice a year. If your home or business is in a heavily wooded area with lots of tree cover, you'll probably need more regular cleanings to prevent clogs, leaks, and moss growth. A regular bi-annual maintenance schedule will also keep you informed of any larger problems, such as degraded shingles and broken downspouts.</p>
+
+                <h3> There is moss growing on my roof. How do I get rid of it? </h3>
+                <p>We always recommend applying a moss treatment after having your roof and gutters cleaned. For more information, check out our <a href="moss-removal.html">moss removal services.</a></p>
+            </section>
+        </main>
+    
+        <footer>
+            &copy; Copywrite 2025 Reda Consulting
+        </footer>
+
+    </body>
+</html>
