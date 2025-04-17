@@ -24,57 +24,69 @@
 
     <!-- body is where the visible text body of the specific page begins -->
     <body>
-                <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
-                <header>
-                    <div class="logo">
-                      <img src="images/white-logo-transparent.svg" alt="Company Logo">
-                    </div>
-                  
-                    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-                  
-                    <nav class="primary-navigation" id="navMenu">
-                      <ul class="main-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
-                          <ul class="dropdown-menu">
-                            <li><a href="moss-removal.html">Roof Moss Removal</a></li>
-                            <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
-                            <li><a href="window-cleaning.html">Window Cleaning</a></li>
-                            <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                      </ul>
-                    </nav>
-                  </header>
-                  
-                  <script>
-                    function toggleMenu() {
-                      document.getElementById('navMenu').classList.toggle('active');
-                    }
-                  
-                    function toggleDropdown(event) {
-                      const isMobile = window.innerWidth <= 600;
-                      if (isMobile) {
-                        event.preventDefault();
-                        const parent = event.target.closest('.dropdown');
-                        parent.classList.toggle('open');
-                      }
-                    }
-                  </script>
+        <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+        <header>
+          <div class="logo">
+            <img src="images/white-logo(150 x 200 px).svg" alt="Company Logo">
+          </div>
+      
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+          <nav class="primary-navigation" id="navMenu">
+            <ul class="main-menu">
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a href="window-cleaning.html">Window Cleaning</a></li>
+                  <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+                  <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+                  <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="careers.html">Careers</a></li>
+            </ul>
+          </nav>
+        </header>
+    
+        <!-- JS for Navigation responsivity -->
+        <script>
+          function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+          }
+        
+          function toggleDropdown(event) {
+            const isMobile = window.innerWidth <= 600;
+            if (isMobile) {
+              event.preventDefault();
+              const parent = event.target.closest('.dropdown');
+              parent.classList.toggle('open');
+            }
+          }
+        </script>
         
 
-    <!-- Begin main content -->
+        <!-- Begin main content -->
         <main>
 
             <!-- Overview -->
             <section id="overview"> 
                 <!-- Only one h1 per page -->
                 <h1> SeaGlass Cleaning Services, LLC </h1>
-                <p> We are a locally owned and operated small business serving residential and commercial clients across Kitsap County. From routine maintenance to storm and construction clean-up, our home services will enhance your home’s beauty and protect it for years to come. </p>
-                <!-- <img src="images/team_rambo.jpg" alt="clean windows"> -->
+                <p> We are a locally owned and operated small business serving residential and commercial clients across Kitsap County. <a href="https://secure.lni.wa.gov/verify/Detail.aspx?UBI=604897582&LIC=SEAGLCS762QD&SAW=" target="_blank">Licensed, bonded, and insured. </a></p>
+            </section>
+
+            <!-- Free Estimates -->
+            <section class="request-bid">
+                <h2>Contact us today for a <strong>free estimate!</strong></h2>
+                <div class="button-wrapper">
+                    <div class="button-group">
+                        <button class="contact-button" type="button"><a href="tel:360-209-2125">(360) 209-2125</a></button>
+                        <button class="contact-button" type="button"><a href = "contact.html" target="_blank">Online Request</a></button>
+                    </div>
+                </div>
             </section>
             
             <!--  What we promise-->
@@ -85,18 +97,8 @@
                     <li> We never upsell you on something you don’t need. </li>
                     <li> We give honest recommendations, even if they involve hiring someone else. </li>
                 </ul>
-                <!-- <img src="images/rambo.jpg" alt="clean windows"> -->
             </section>
 
-            <!-- Practice background image -->
-            <!-- <section>
-                <div class="windows-practice">
-                    <h2>Window Cleaning Services</h2>
-                    <p>This is an example sentence</p>
-                </div>
-
-            </section> -->
-            
             <!--  Services -->
             <section id="services-section">
                 <h2>Our Services</h2>
@@ -137,21 +139,13 @@
                             <p> Yee haw. </p>
                         </div> -->
                     </div>
-
                 </div>
-
-                <!-- <ul>
-                    <li><a href = "window-cleaning.html">Professional Window Cleaning</a></li>
-                    <li><a href = "roof-gutter-cleaning.html">Professional Roof and Gutter Cleaning</a></li>
-                    <li><a href = "moss-removal.html">Professional Roof Moss Removal and Treatment</a></li>
-                    <li><a href = "solar-panel-cleaning.html">Professional Solar Panel Cleaning</a></li>
-                </ul> -->
             </section>
 
             <!-- Service Area -->
-            <section>
+            <section class="service-areas">
                 <h2> Service Areas </h2>
-                <p> We serve Kitsap County, including the following locations:</p>
+                <p> We serve <strong>Kitsap County</strong>, including the following locations:</p>
                 <div class="two-column-layout">
                     <div>
                         <ul>
@@ -181,11 +175,17 @@
                 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
                 <div class="elfsight-app-0b1fa711-9ab9-4a09-aa8c-d95d82508d44" data-elfsight-app-lazy></div>
             </section>
+        
         </main>
         
         <!-- Footer -->
         <footer>
-            &copy; Copywrite 2025 Reda Consulting <a href="privacy-policy.html"> Privacy Policy </a> | <a href="privacy-policy.html"> Careers
+            <!-- <div>
+            <img src="images/transparent-logo.svg" alt="">
+            </div> -->
+            <div class="footer-text">
+            <span>&copy; Copyright 2025 Reda Consulting</span>
+            <span> <a href="privacy-policy.html">Privacy Policy</a> | <a href="careers.html">Careers</a></span>
         </footer>
     </body>
 </html>
