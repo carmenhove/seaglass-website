@@ -1,11 +1,19 @@
 
-/* h1 is the selector, the info between the brackets are the declarations */
-
 /* For sizing, use rem which is a scaled value of the html font size. All else equal default value is 16pxl, but this can be changed by user preferences.*/
 
 * {
     box-sizing: border-box;
 }
+
+a { 
+  color:blue;
+  text-decoration: none;
+} 
+
+a:visited { text-decoration: none; color:blue; }
+a:hover { text-decoration: none; color:blue; }
+a:focus { text-decoration: none; color:blue; }
+a:hover, a:active { text-decoration: none; color:blue }
 
 body{
     background-color: #ffffff;
@@ -22,13 +30,121 @@ img{
 }
 
 section{
-    margin-block: 10px;
+    margin-block: 20px;
 }
+
+/* Header and navigation  */
+
+header {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.primary-navigation {
+  display: flex;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-menu li {
+  position: relative;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+}
+
+.main-menu a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  min-width: 200px;
+  z-index: 10;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Desktop hover dropdown */
+@media (min-width: 601px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .primary-navigation {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  .primary-navigation.active {
+    display: flex;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-menu li {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+  }
+
+  .dropdown-menu li a {
+    padding-left: 30px;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
 h1 {
     background-color: grey;
     padding: 2rem;
-    /* padding: 15px; */
     color: white;
     font-size: 45px;
     text-align: center;
@@ -71,6 +187,16 @@ p, h3, h4 {
     margin-bottom: 20px; /* Adjust as needed */
 }
 
+#stacking{
+
+  @media screen and (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    height: 200px;
+}
+}
+
 
 .four-column-layout {
     display: block; /* Default for smaller screens */
@@ -84,13 +210,26 @@ p, h3, h4 {
         }
 }
 
-.four-column-layout > div {
-    margin-bottom: 20px; /* Adjust as needed */
+.left-column{
+  justify-items: center;
+
+  @media screen and (min-width: 600px) {
+      justify-self: end; /* Right-align content in the left column */
+      text-align: right;
+    }
+  }
+
+  .right-column{
+    justify-items: center;
+
+    @media screen and (min-width: 600px) {
+        justify-self: start; /* Right-align content in the left column */
+        text-align: left;
+      }
 }
 
-footer {
-    background-color: aqua;
-    padding: 15px;
+.four-column-layout > div {
+    margin-bottom: 20px; /* Adjust as needed */
 }
 
 .service-title{
@@ -115,22 +254,14 @@ footer {
                       url('../images/cropped-windows.jpg');
     background-size: cover;
     background-position: center;
-    /* background-position: no-repeat; */
 }
-/* 
-#windows {
-    border-image: linear-gradient(
-        hsl(240 100% 50%/.3),
-        hsl(0 100% 50% / .3))
-        fill 1;
-} */
 
 #roofs-gutters{
     position: relative;
     width: 100%;
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/roof-after.jpg');
+                      url('../images/after-gutters.jpg');
     background-size: cover;
     background-position: center;
     background-position: no-repeat;
@@ -152,7 +283,7 @@ footer {
     width: 100%;
     height: 250px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/roof-after.jpg');
+                      url('../images/before-solar-canva.jpg');
     background-size: cover;
     background-position: center;
     background-position: no-repeat;
@@ -162,10 +293,16 @@ footer {
     color: #ffffff;
     height: 550px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/hero-2.jpg');
+                      url('../images/rambo.webp');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-position: no-repeat;
+    margin-block: 0px;
+
+    @media screen and (min-width: 600px) {
+      height: 500px;
+      font-size: 1.75rem;
+   }
 }
 
 #overview p{
@@ -181,14 +318,36 @@ footer {
     size: 2rem;
 }
 
+#overview a{
+  color: white;
+}
+
+
+/* INDIVIDUAL SERVICE PAGES CSS */
+#window-background{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/windows-main.webp');
+}
+
+#gutter-background{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/after-gutters.jpg');
+}
+
+#moss-background{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/moss-compressed.jpg');
+}
+
+#solar-background{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/before-solar-canva.jpg');
+}
+
+
 .overview-service-page{
     color: #ffffff;
     height: 600px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/rambo.webp');
     background-size: cover;
     background-position: top;
     background-position: no-repeat;
+    margin-block: 0px;
 
     @media screen and (min-width: 600px) {
        height: 500px;
@@ -205,193 +364,109 @@ footer {
 }   
 
 .request-bid{
-    font-size: 1.25rem;
+  /* background-color: #D3D3D3; */
+  padding-top: 0px;
+  padding-bottom: 10px;
+    /* font-size: 1.5rem;
     background-color: #4b4e52;
     background-color: rgba(0, 0, 0, 0.15);
-    padding: 15px;
+    padding: 15px; */
     /* margin-left: 15px;
     margin-right: 15px; */
-    text-align: center;
+    /* text-align: center;
+    line-height: 2; */
 
     @media screen and (min-width: 600px) {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
      }
 }
 
-.our-process{
+.request-bid h2{
+  background-color: white;
+  color: black;
+}
 
+.our-process{
     @media screen and (min-width: 600px) {
         font-size: 1.5rem;
      }
 
 }
 
-
-/* #guarantees{
-    color: #ffffff;
-    height: 550px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/rambo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-position: no-repeat;
+  /* Buttons */
+button{
+  justify-content: center;
+  background-color: black; 
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: inherit;
 }
 
-#guarantees li{
-    background-color: #4b4e52;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}  */
 
-/* img{
-    max-width: 100%
+.contact-button a{
+  color: white;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+footer {
+  background-color:#89cec3 ;
+  padding: 15px;
+  size: 1rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+  
 }
 
-nav ul li {
-    position: relative;
-    margin-right: 20px;
+.footer-text{
+display: flex;
+justify-content: space-between;
 }
 
-nav ul li .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* p span { 
+  background-color: #89cec3; 
+  padding:10px;
+  border-radius: 25px;
 }
 
-nav ul li:hover .dropdown-menu {
-    display: block;
+#bid{
+  size: 45px;
 }
 
-nav ul li .dropdown-menu li {
-    padding: 5px 15px;
-}
-
-nav ul li .dropdown-menu li a {
-    text-decoration: none;
-    color: black;
-    display: block;
-}
-
-nav ul li .dropdown-menu li a:hover {
-    background: #f0f0f0;
+.overview-service-page{
+  margin-block: 0px;
 } */
 
-  header {
-    background-color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    flex-wrap: wrap;
-  }
-  
-  .logo img {
-    height: 40px;
-  }
-  
-  .primary-navigation {
-    display: flex;
-  }
-  
-  .main-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .main-menu li {
-    position: relative;
-  }
-  
-  .main-menu a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    display: block;
-  }
-  
-  .main-menu a:hover {
-    background-color: #444;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #444;
-    list-style: none;
-    min-width: 200px;
-    z-index: 10;
-  }
-  
-  .dropdown-menu li a {
-    padding: 10px 15px;
-  }
-  
-  .menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Desktop hover dropdown */
-  @media (min-width: 601px) {
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-  }
-  
-  /* Mobile styles */
-  @media (max-width: 600px) {
-    .primary-navigation {
-      width: 100%;
-      flex-direction: column;
-      display: none;
-    }
-  
-    .primary-navigation.active {
-      display: flex;
-    }
-  
-    .main-menu {
-      flex-direction: column;
-      gap: 0;
-    }
-  
-    .main-menu li {
-      width: 100%;
-    }
-  
-    .dropdown-menu {
-      position: static;
-    }
-  
-    .dropdown-menu li a {
-      padding-left: 30px;
-    }
-  
-    .dropdown.open .dropdown-menu {
-      display: block;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  }
-  
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* adjust as needed */
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.wrapped-img {
+  float: left; /* or right */
+  margin: 10px 30px 30px 30px; /* space around the image */
+  width: 250px; /* adjust as needed */
+}
+
+.privacy-overview, #join-our-team{
+  margin: 0px;
+}
