@@ -1,10 +1,12 @@
 
 /* For sizing, use rem which is a scaled value of the html font size. All else equal default value is 16pxl, but this can be changed by user preferences.*/
 
+/* BOX SIZING */
 * {
     box-sizing: border-box;
 }
 
+/* LINKS */
 a { 
   color:blue;
   text-decoration: none;
@@ -15,26 +17,42 @@ a:hover { text-decoration: none; color:blue; }
 a:focus { text-decoration: none; color:blue; }
 a:hover, a:active { text-decoration: none; color:blue }
 
+/* BODY */
 body{
     background-color: #ffffff;
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* padding: 2rem; */
     font-size: 1.25rem;
     /* Use ratio */
     line-height: 1.5;
     /* letter-spacing: 0.05rem; */
+    /* max-width: 1440px; */
 }
 
+/* IMAGES */
 img{
     max-inline-size: 100%;
 }
 
+/* SECTIONS */
 section{
-    margin-block: 20px;
+    margin-block: 0px;
 }
 
-/* Header and navigation  */
+/* UNORDERED LISTS */
+ul {
+  padding-right: 1rem;
+}
 
+ul li { padding: 5px 0px; }
+
+ol li { 
+  padding: 5px 0px;
+  padding-right: 1rem;
+      
+}
+
+/* HEADER, LOGO AND NAVIGATION  */
 header {
   background-color: #333;
   display: flex;
@@ -45,8 +63,12 @@ header {
   flex-wrap: wrap;
 }
 
-.logo img {
-  height: 60px;
+.logo img{
+  height: 70px;
+
+  @media screen and (min-width: 600px) {
+   height: 90px;
+}
 }
 
 .primary-navigation {
@@ -104,7 +126,7 @@ header {
 }
 
 /* Mobile styles */
-@media (max-width: 600px) {
+@media (max-width: 929px) {
   .primary-navigation {
     width: 100%;
     flex-direction: column;
@@ -141,50 +163,151 @@ header {
   }
 }
 
-
+/* HEADER 1 */
 h1 {
-    background-color: grey;
-    padding: 2rem;
-    color: white;
-    font-size: 45px;
+    /* background-color: #52555a; */
+    padding-top: 1rem;
+    color:white;
+    font-size: 4rem;
     text-align: center;
     line-height: 1.1;
-    margin-top: 0px;
-
-    /* Add media query so that font doesn't go over the side of the page on small screens */
-    @media screen and (max-width: 600px) {
-          font-size: 35px;
-        }
+    /* margin-top: 0px;
+    padding-top: 1.25rem; */
 }
 
+/* SUBSEQUENT HEADERS */
 h2 {
-    background-color: grey;
-    padding: 1rem;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    line-height: 1.1;
+  background-color: #52555a;
+  padding: 1.8rem;
+  color: white;
+  font-size: 1.75rem;
+  text-align: center;
+  line-height: 1.1;
 }
 
 p, h3, h4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.two-column-layout {
-    display: block; /* Default for smaller screens */
-    margin-left: 20px;
-    margin-right: 20px;
+/* OVERVIEW CONTENT FOR INDEX PAGE */
+.overview{
+  background: #079e84;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), 
+    url('../images/desktop/iStock-685796102.webp');
+  background-size: cover;
+  background-position: center center;
+  background-position: no-repeat;
+  /* background-blend-mode: multiply; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
-    @media screen and (min-width: 600px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+.overview a{
+  color: white;
+}
+
+.overview p{
+  background-color: #4b4e52;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}  
+
+/* REQUEST BID SECTION */
+
+/* Buttons */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* adjust as needed */
+  margin-bottom: 1rem;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.button-group button {
+  padding: 1.5rem 1.5rem;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+button{
+  justify-content: center;
+  background-color: black; 
+  border: none;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: inherit;
+}
+
+.contact-button a{
+  color: white;
+}
+
+.request-bid{
+  /* background-color: rgb(191, 224, 243); */
+  color: black;
+  text-align: center;
+  padding: 1rem;
+}
+
+.request-bid p {
+  font-size: 1.75rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  margin: 1rem; /* remove default margin */
+}
+
+.testimonials p{
+  text-align: center;
+}
+
+/* TWO COLUMN LAYOUT */
+.two-column-layout {
+  display: block; /* Default for smaller screens */
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  @media screen and (min-width: 600px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+      }
 }
 
 .two-column-layout > div {
-    margin-bottom: 20px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+
+/* SERVICE PAGES */
+.photos{
+  margin-block: 2rem;
+}
+
+
+
+/* STACKING COLUMNS W PHOTOS */
+
+.two-column-layout-stack {
+  display: block; /* Default for smaller screens */
+  margin-top: 2rem;
+
+  @media screen and (min-width: 700px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+      }
 }
 
 #stacking{
@@ -193,21 +316,7 @@ p, h3, h4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
-    height: 200px;
 }
-}
-
-
-.four-column-layout {
-    display: block; /* Default for smaller screens */
-    margin-left: 20px;
-    margin-right: 20px;
-
-    @media screen and (min-width: 600px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 20px;
-        }
 }
 
 .left-column{
@@ -228,9 +337,57 @@ p, h3, h4 {
       }
 }
 
-.four-column-layout > div {
-    margin-bottom: 20px; /* Adjust as needed */
+.wrapped-img {
+  float: left; /* or right */
+  margin: 10px 30px 30px 30px; /* space around the image */
+  width: 250px; /* adjust as needed */
 }
+
+.privacy-overview, #join-our-team{
+  margin: 0px;
+}
+
+/* Default = 360 */
+/* 666, 768, 1024, 1300 */
+
+/* @media screen and (min-width: 666px) {
+  h1 {
+    font-size: 4rem;
+    padding-top: 4rem;
+  }
+  .two-column-layout{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h1 {
+    font-size: 4rem;
+    padding-top: 4rem;
+  }
+} */
+
+
+
+
+/* INDEX PAGE OVERVIEW */
+/* 360 mobile, 666 landscape mobile, 768 tablet, 1024 large tablet, 1300 desktop */
 
 .service-title{
     background-color: #4b4e52;
@@ -246,82 +403,48 @@ p, h3, h4 {
 }
 
 #windows{
-    position: relative;
-    width: 100%;
-    height: 250px;
-    /* position: relative; */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/cropped-windows.webp');
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/cropped-windows.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
 }
 
 #roofs-gutters{
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/after-gutters.webp');
-    background-size: cover;
-    background-position: center;
-    background-position: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/after-gutters.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
 }
 
 #moss-treatment{
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/roof-treated.webp');
-    background-size: cover;
-    background-position: center;
-    background-position: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/roof-treated.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
 }
 
 #solar-panels{
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/after-solar.webp');
-    background-size: cover;
-    background-position: center;
-    background-position: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/after-solar.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
 }
-
-#overview{
-    color: #ffffff;
-    height: 550px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                      url('../images/rambo.webp');
-    background-size: cover;
-    background-position: top;
-    background-position: no-repeat;
-    margin-block: 0px;
-
-    @media screen and (min-width: 600px) {
-      height: 500px;
-      font-size: 1.75rem;
-   }
-}
-
-#overview p{
-    background-color: #4b4e52;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}   
-
-#overview p{
-    padding-bottom: 20px;
-    size: 2rem;
-}
-
-#overview a{
-  color: white;
-}
-
 
 /* INDIVIDUAL SERVICE PAGES CSS */
 #window-background{
@@ -339,7 +462,6 @@ p, h3, h4 {
 #solar-background{
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/before-solar-canva.jpg');
 }
-
 
 .overview-service-page{
     color: #ffffff;
@@ -363,57 +485,23 @@ p, h3, h4 {
     text-align: center;
 }   
 
-.request-bid{
-  /* background-color: #D3D3D3; */
-  padding-top: 0px;
-  padding-bottom: 10px;
-    /* font-size: 1.5rem;
-    background-color: #4b4e52;
-    background-color: rgba(0, 0, 0, 0.15);
-    padding: 15px; */
-    /* margin-left: 15px;
-    margin-right: 15px; */
-    /* text-align: center;
-    line-height: 2; */
 
-    @media screen and (min-width: 600px) {
-        font-size: 1.5rem;
-     }
-}
-
-.request-bid h2{
-  background-color: white;
-  color: black;
-}
 
 .our-process{
     @media screen and (min-width: 600px) {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
      }
 
 }
 
-  /* Buttons */
-button{
-  justify-content: center;
-  background-color: black; 
-  border: none;
-  border-radius: 10px;
-  padding: 1rem 1rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: inherit;
-}
-
-
-.contact-button a{
-  color: white;
-}
+  
 
 footer {
-  background-color:#89cec3 ;
-  padding: 15px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), 
+    url('../images/desktop/iStock-685796102.webp');
+  background-position: bottom;
+  padding: 1.5rem;
+  margin-top: 1rem;
   size: 1rem;
 
   @media screen and (max-width: 600px) {
@@ -423,73 +511,44 @@ footer {
 }
 
 .footer-text{
+  color: white;
 display: flex;
 justify-content: space-between;
 }
 
-/* p span { 
-  background-color: #89cec3; 
-  padding:10px;
-  border-radius: 25px;
+.footer a{
+  color: white;
 }
 
-#bid{
-  size: 45px;
-}
+.footer a:visited { text-decoration: none; color:white; }
 
-.overview-service-page{
-  margin-block: 0px;
-} */
 
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px; /* adjust as needed */
-  margin-bottom: 10px;
-}
+/* Mobile styles */
+/* @media (max-width: 929px) {
+  .primary-navigation {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
 
-.button-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+  .primary-navigation.active {
+    display: flex;
+  }
 
-.button-group button {
-  padding: 10px 20px;
-  font-size: inherit;
-  cursor: pointer;
-}
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
 
-.wrapped-img {
-  float: left; /* or right */
-  margin: 10px 30px 30px 30px; /* space around the image */
-  width: 250px; /* adjust as needed */
-}
+  .main-menu li {
+    width: 100%;
+  }
 
-.privacy-overview, #join-our-team{
-  margin: 0px;
-}
+  .dropdown-menu {
+    position: static;
+  }
 
-/* .testing{
-  position: relative;
-  z-index: 1;
-}
-
-.testing-pic{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.testing-pic img{
-  position:absolute; 
-  height: 100%; 
-  width: 100%; 
-  top: 0; 
-  left: 0; 
-  object-fit: cover;
+  .dropdown-menu li a {
+    padding-left: 30px;
+  }
 } */
