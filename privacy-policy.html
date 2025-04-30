@@ -26,7 +26,7 @@
     <body>
       <header>
         <div class="logo">
-          <img src="images/white-logo(150 x 200 px).svg" alt="Company Logo">
+          <img src="images/banner - (1200 x 400 px).svg" alt="Company Logo">
         </div>
     
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -51,53 +51,47 @@
       </header>
 
       <!-- JS for Navigation responsivity -->
-      <script>
-        function toggleMenu() {
-          document.getElementById('navMenu').classList.toggle('active');
-        }
-      
-        function toggleDropdown(event) {
-          const isMobile = window.innerWidth <= 600;
-          if (isMobile) {
-            event.preventDefault();
-            const parent = event.target.closest('.dropdown');
-            parent.classList.toggle('open');
-          }
-        }
-      </script>
+      <script src="nav.js"></script>
               
 
         <!--Main content -->
         <main>
-            <section class="privacy-overview">
-                <h1>Terms and Conditions / Privacy Policy</h1>
-            </section>
+          <!-- Overview -->
+          <section class="overview"> 
+            <!-- Only one h1 per page -->
+            <h1> Terms and Conditions & Privacy Policy</i></h1>
+            <!-- <p> We do our best to respond within one business day. </a></p> -->
+          </section>
 
+          <section>
             <p> SeaGlass Cleaning Services respects your privacy. By opting into our SMS messaging service, you agree to the following terms regarding how we handle your data: </p>    
 
             <ul>
-                    <li>Data Collection: We will collect your name, email address, mailing address, and mobile phone number when you sign up for SMS updates. The information will be collected via our website contact form. </li>
-                    <li>Data Usage: We use your data solely for sending updates and reminders related to our products or services. </li>
-                    <li>Data Security: We protect your data with secure storage measures to prevent unauthorized access.</li>
-                    <li>Data Retention: We retain your information as long as you are subscribed to our SMS service. You may request deletion at any time. </li>
-                    <li>MESSAGE AND DATA RATES MAY APPLY. Your mobile carrier may charge fees for sending or receiving text messages, especially if you do not have unlimited texting or data plan.</li>
-                    <li>Messages are recurring, and message frequency varies.</li>
-                    <li>Contact SeaGlass Cleaning Services at (360) 209-2125 or <a href = "mailto: carmen@seaglasscleaningservices.com" style="word-wrap: break-word; white-space: normal;">carmen@seaglasscleaningservices.com</a> for HELP or to STOP receiving messages.</li>
-                    <li>Opt-Out: You can opt out of the SMS list at anytime by texting, emailing, or replying STOP to <a href = "mailto: carmen@seaglasscleaningservices.com" style="word-wrap: break-word; white-space: normal;">carmen@seaglasscleaningservices.com</a> or (360) 209-2125. After unsubscribing, you will receive a final SMS to confirm you have unsubscribed and we will remove your number from our list within 24 hours.</li>
-                    <li>You can send HELP to additional assistance, and you will receive a text including our Phone number, email and website. We are here to help you.</li>
-                    <li>Non-Sharing Clause: We do not share your data with third parties for marketing services. SeaGlass Cleaning Services will not sell, rent, or share the collected mobile numbers.</li>
-                </ul>
-            </section>
+              <li>Data Collection: We will collect your name, email address, mailing address, and mobile phone number when you sign up for SMS updates. The information will be collected via our website contact form. </li>
+              <li>Data Usage: We use your data solely for sending updates and reminders related to our products or services. </li>
+              <li>Data Security: We protect your data with secure storage measures to prevent unauthorized access.</li>
+              <li>Data Retention: We retain your information as long as you are subscribed to our SMS service. You may request deletion at any time. </li>
+              <li>MESSAGE AND DATA RATES MAY APPLY. Your mobile carrier may charge fees for sending or receiving text messages, especially if you do not have unlimited texting or data plan.</li>
+              <li>Messages are recurring, and message frequency varies.</li>
+              <li>Contact SeaGlass Cleaning Services at (360) 209-2125 or <a href = "mailto: carmen@seaglasscleaningservices.com" style="word-wrap: break-word; white-space: normal;">carmen@seaglasscleaningservices.com</a> for HELP or to STOP receiving messages.</li>
+              <li>Opt-Out: You can opt out of the SMS list at anytime by texting, emailing, or replying STOP to <a href = "mailto: carmen@seaglasscleaningservices.com" style="word-wrap: break-word; white-space: normal;">carmen@seaglasscleaningservices.com</a> or (360) 209-2125. After unsubscribing, you will receive a final SMS to confirm you have unsubscribed and we will remove your number from our list within 24 hours.</li>
+              <li>You can send HELP to additional assistance, and you will receive a text including our Phone number, email and website. We are here to help you.</li>
+              <li>Non-Sharing Clause: We do not share your data with third parties for marketing services. SeaGlass Cleaning Services will not sell, rent, or share the collected mobile numbers.</li>
+            </ul>
+          </section>
+
+            
         </main>
     
-        <footer>
-          <!-- <div>
-            <img src="images/transparent-logo.svg" alt="">
-          </div> -->
-          <div class="footer-text">
-            <span>&copy; Copyright 2025 Reda Consulting</span>
-            <span> <a href="privacy-policy.html">Privacy Policy</a> | <a href="careers.html">Careers</a></span>
-        </footer>
+         <!-- Footer -->
+    <footer>
+      <!-- <div>
+        <img src="images/transparent-logo.svg" alt="">
+      </div> -->
+      <div class="footer-text">
+        <span>&copy; Copyright 2025 Reda Consulting</span>
+        <span> <a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="careers.html" style="color: white;">Careers</a></span>
+  </footer>
 
     </body>
 </html>

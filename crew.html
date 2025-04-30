@@ -1,0 +1,87 @@
+
+<!-- Multi-page website so that we can customize SEO for each of our services and retain individualized landing pages for Google Ads. -->
+<!-- Media queries are "if, then" statements for styling so that design can respond to different viewports -->
+
+
+<!-- This is an HTML5 document type -->
+<!DOCTYPE html>
+
+<!-- html is the root element, best practice is to specify language -->
+<html lan="en">
+    <!-- head contains meta data: information for machine processing, not human-readability.  -->
+    <head>
+        <!-- sets the character coding -->
+        <meta charset="utf-8"/>
+        <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- document title -->
+        <title> Roof and Gutter Cleaning </title>
+        <!-- set the base html -->
+         <!-- <base href="https://www.seaglasscleaningservices.com"> -->
+          <!-- link to css file for formating -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+     <!-- body is where the visible text body of the specific page begins -->
+  <body>
+    <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+    <header>
+      <div class="logo">
+        <img src="images/white-logo(150 x 200 px).svg" alt="Company Logo">
+      </div>
+  
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  
+      <nav class="primary-navigation" id="navMenu">
+        <ul class="main-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="window-cleaning.html">Window Cleaning</a></li>
+              <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+              <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+              <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- JS for Navigation responsivity -->
+    <script src="nav.js"></script>
+
+      <!-- Main content -->
+      <main>
+
+        <section>
+            <h2> Jordan McGrath </h2>
+            <p>After beginning my career in the non-profit world, I pivoted to entrepreneurship within the home service/maintenance industry in 2018. I’m passionate about serving my neighbors and community, and this passion ultimately led to starting SeaGlass Cleaning Services. When I’m not unclogging your gutters or cleaning your windows, I love practicing yoga, going to concerts, flying my kites, or just hanging out at home with my wife Sarah, dog Piglet, and cat Mr. Lump. Go Packers.</p>
+        </section>
+
+        <section>
+            <h2> Carmen </h2>
+            <p>After spending a decade doing research on human health and working in data and analytics, I decided I wanted to use these skills within the trades rather than inside an office. I joined SeaGlass in summer 2024. When I’m not working, I love building things, weightlifting, trail running, and reading good books. Go Mariners. </p>
+        </section>
+
+        <section>
+            <h2> Noah </h2>
+            <p>After spending a decade doing research on human health and working in data and analytics, I decided I wanted to use these skills within the trades rather than inside an office. I joined SeaGlass in summer 2024. When I’m not working, I love building things, weightlifting, trail running, and reading good books. Go Mariners. </p>
+        </section>
+
+      </main>
+    
+        <!-- Footer -->
+      <footer>
+        <!-- <div>
+          <img src="images/transparent-logo.svg" alt="">
+        </div> -->
+        <div class="footer-text">
+          <span>&copy; Copyright 2025 Reda Consulting</span>
+          <span> <a href="privacy-policy.html">Privacy Policy</a> | <a href="careers.html">Careers</a></span>
+      </footer>
+    </body>
+</html>

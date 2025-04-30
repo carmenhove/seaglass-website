@@ -1,0 +1,167 @@
+
+<!-- Multi-page website so that we can customize SEO for each of our services and retain individualized landing pages for Google Ads. -->
+<!-- Media queries are "if, then" statements for styling so that design can respond to different viewports -->
+
+
+<!-- This is an HTML5 document type -->
+<!DOCTYPE html>
+
+<!-- html is the root element, best practice is to specify language -->
+<html lan="en">
+    <!-- head contains meta data: information for machine processing, not human-readability.  -->
+    <head>
+        <!-- sets the character coding -->
+        <meta charset="utf-8"/>
+        <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- document title -->
+        <title> Careers </title>
+        <!-- set the base html -->
+         <!-- <base href="https://www.seaglasscleaningservices.com"> -->
+          <!-- link to css file for formating -->
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+    <!-- body is where the visible text body of the specific page begins -->
+    <body>
+      <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
+    <header>
+      <div class="logo">
+        <img src="images/banner - (1200 x 400 px).svg" alt="Company Logo">
+      </div>
+  
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  
+      <nav class="primary-navigation" id="navMenu">
+        <ul class="main-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="window-cleaning.html">Window Cleaning</a></li>
+              <li><a href="roof-and-gutter-cleaning.html">Roof and Gutter Cleaning</a></li>
+              <li><a href="moss-removal.html">Roof Moss Removal</a></li>
+              <li><a href="solar-panel-cleaning.html">Solar Panel Cleaning</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- JS for Navigation responsivity -->
+    <script src="nav.js"></script>
+
+        <!--Main content -->
+        <main>
+            <!-- Overview -->
+            <section class="overview"> 
+              <!-- Only one h1 per page -->
+              <h1> Join Our Team</i></h1>
+              <p> We're always looking for good people! </a></p>
+            </section>
+
+
+                <h3>Technician I/II</h3>
+
+                <p> SeaGlass Cleaning Services, LLC is a small business locally owned and operated in Kitsap County. We are a small team committed to unparalleled service and the wellbeing of our clients and employees.  We treat each client with respect and professionalism and we leave every property better than we found it. We’re looking for a part-time technician to join the team! If you’re a person of high integrity, take pride in your work, enjoy working outdoors, and want to be part of a growing small business we’d love to hear from you. </p>
+
+                <h4>What we're offering</h4>
+
+                <ul>
+                    <li>Part-time W2 position with the possibility of full-time work in the future</li>
+                    <li>$25-$30/hr, depending on experience</li>
+                    <li>Profit sharing after 6 months of employment and bonus pay for work well done (at owner’s discretion and dependent on continued success of the business)</li>
+                    <li>$20 bonus for each reference on 5-star review</li>
+                    <li>3 paid holidays (Thanksgiving, Christmas Day, New Years)</li>
+                    <li>Membership and access to Manette Clinic</li>
+                    <li>Complimentary 60 minute Swedish massage every 6 months</li>
+                </ul>
+
+                <h4>Responsibilities</h4>
+
+                <ul>
+                  <li>Provide excellent customer service</li>
+                  <li>Clean interior and exterior windows using both traditional (squeegee + ladder) and water-fed pole methods</li>
+                  <li>Clean debris off roofs using 25 lb backpack blower</li>
+                  <li>Clean gutters and apply moss treatments using proper safety protocols</li>
+                  <li>Maintain high level of safety and quality of service while on ladders</li>
+                  <li>Learn new skills as needed</li>
+              </ul>
+
+              <h4>Who we're looking for</h4>
+
+                <ul>
+                  <li>Trustworthy and honest</li>
+                  <li>Friendly, professional, and motivated</li>
+                  <li>1+ year experience in related industry (especially those involving roof and ladder work)</li>
+                  <li>Comfortable with heights and working outside in all kinds of weather</li>
+                  <li>Preferred candidates have experience with traditional and/or water-fed pole window cleaning methods</li>
+              </ul>
+
+              <p>If you don’t have any of the specific experience listed above but you’re a self-motivated person who enjoys physical work and gets along well with others, please apply!</p>
+
+              <h4>Requirements</h4>
+
+              <ul>
+                <li>18+ years old</li>
+                <li>Driver's license and reliable transportation (we'll provide the work van, but you'll need a reliable way to get to the main office each morning)</li>
+                <li>Pass a background check</li>
+                <li>Legally able to work in the US</li>
+                <li>Fluent in English</li>
+            </ul>
+
+            <h4>Application Instructions</h4>
+            <p>Email <a href = "mailto: jordan@seaglasscleaningservices.com" style="word-wrap: break-word; white-space: normal;">jordan@seaglasscleaningservices.com</a> with the following info:</p>
+            <ul>
+              <li>Your first and last name</li>
+              <li>Your phone number and email address</li>
+              <li>Your resumé (attached as a Word doc or PDF) with 3 professional references</li>
+              <li>A short message about why you're applying to work with us!</li>
+            </ul>
+
+            </section>
+
+            <!-- <section>
+              <form action="https://formsubmit.co/carmen@seaglasscleaningservices.com" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next">
+              
+                <label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" name="First Name" required><br><br>
+              
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" name="Last Name" required><br><br>
+              
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="Phone"><br><br>
+              
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="Email" required><br><br>
+              
+                <label for="file">Upload a File:</label><br>
+                <input type="file" id="file" name="File"><br><br>
+              
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="Message" rows="5" cols="40"></textarea><br><br>
+              
+                <button type="submit">Submit</button>
+              </form>
+              
+            </section> -->
+        </main>
+    
+         <!-- Footer -->
+    <footer>
+      <!-- <div>
+        <img src="images/transparent-logo.svg" alt="">
+      </div> -->
+      <div class="footer-text">
+        <span>&copy; Copyright 2025 Reda Consulting</span>
+        <span> <a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="careers.html" style="color: white;">Careers</a></span>
+  </footer>
+
+    </body>
+</html>

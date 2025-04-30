@@ -22,7 +22,7 @@
     <body>
       <header>
         <div class="logo">
-          <img src="images/white-logo(150 x 200 px).svg" alt="Company Logo">
+          <img src="images/banner - (1200 x 400 px).svg" alt="Company Logo">
         </div>
     
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -47,33 +47,26 @@
       </header>
 
       <!-- JS for Navigation responsivity -->
-      <script>
-        function toggleMenu() {
-          document.getElementById('navMenu').classList.toggle('active');
-        }
-      
-        function toggleDropdown(event) {
-          const isMobile = window.innerWidth <= 600;
-          if (isMobile) {
-            event.preventDefault();
-            const parent = event.target.closest('.dropdown');
-            parent.classList.toggle('open');
-          }
-        }
-      </script>
+      <script src="nav.js"></script>
 
-        <h1>Contact us</h1>
+      <!-- Overview -->
+      <section class="overview"> 
+        <!-- Only one h1 per page -->
+        <h1> Contact Us</i></h1>
+        <p> We do our best to respond within one business day. </a></p>
+      </section>
               
         <br><br><center><iframe src="https://www.thecustomerfactor.com/new/bid.php?id=c2VhZ2xhc3N3aW5kb3c=&c=VVM=" width="100%" height="650" frameborder="0" scrolling="auto"></iframe></center>
 
-        <footer>
-          <!-- <div>
-            <img src="images/transparent-logo.svg" alt="">
-          </div> -->
-          <div class="footer-text">
-            <span>&copy; Copyright 2025 Reda Consulting</span>
-            <span> <a href="privacy-policy.html">Privacy Policy</a> | <a href="careers.html">Careers</a></span>
-        </footer>
+        <!-- Footer -->
+    <footer>
+      <!-- <div>
+        <img src="images/transparent-logo.svg" alt="">
+      </div> -->
+      <div class="footer-text">
+        <span>&copy; Copyright 2025 Reda Consulting</span>
+        <span> <a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="careers.html" style="color: white;">Careers</a></span>
+  </footer>
 
        
 

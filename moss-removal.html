@@ -26,7 +26,7 @@
       <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
       <header>
         <div class="logo">
-          <img src="images/white-logo(150 x 200 px).svg" alt="Company Logo">
+          <img src="images/banner - (1200 x 400 px).svg" alt="Company Logo">
         </div>
     
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -51,31 +51,18 @@
       </header>
 
       <!-- JS for Navigation responsivity -->
-      <script>
-        function toggleMenu() {
-          document.getElementById('navMenu').classList.toggle('active');
-        }
-      
-        function toggleDropdown(event) {
-          const isMobile = window.innerWidth <= 600;
-          if (isMobile) {
-            event.preventDefault();
-            const parent = event.target.closest('.dropdown');
-            parent.classList.toggle('open');
-          }
-        }
-      </script>
+      <script src="nav.js"></script>
 
         <!-- Main content -->
         <main>
-          <section class="overview-service-page" id="moss-background">
+          <section class="overview">
               <h1>Moss Removal and Prevention</h1>
               <p>Ecologically responsible and effective moss removal that won't harm your roof or void your warranty.</p>
           </section>    
 
           <!-- Free Estimates -->
           <section class="request-bid">
-            <h2>Contact us today for a <strong>free estimate!</strong></h2>
+            <p>Contact us today for a <strong>free estimate</strong></p>
             <div class="button-wrapper">
                 <div class="button-group">
                     <button class="contact-button" type="button"><a href="tel:360-209-2125">(360) 209-2125</a></button>
@@ -84,52 +71,71 @@
             </div>
           </section>
 
-          <hr style="border: none; height: 2px; background-color: black; margin: 20px 0;">
+          <!-- Photos -->
+          <section class="photos">
+            <div class="two-column-layout">
+                <div>
+                    <img src="images/moss-compressed.jpg" alt="A clean skylight window.">
+                    <!-- <figcaption>After roof and window cleaning.</figcaption> -->
+                </div>
+                <div>
+                  <img src="images/roof-treated.webp" alt="A dirty skylight window.">
+                  <!-- <figcaption>Before roof and window cleaning.</figcaption> -->
+              </div>
+            </div>
+            <!-- photos here -->
+        </section>
+          <!-- <hr style="border: none; height: 2px; background-color: black; margin: 20px 0;"> -->
             
             <!-- Overview -->
-            <section>
-              <p> If you see green stuff on your roof, you're not alone! Due to our climate, moss grows rapidly on roof surfaces. When left unchecked, moss shoots spores underneath the roof shingles, slowly pushing them upwards and eventually causing leaks.</p>
-              
-              <p>Before applying a moss treatment, we recommend blowing debris off the roof and <a href="roof-and-gutter-cleaning.html">cleaning your gutters and downspouts</a> to get the most out of your service. </p>
-            </section>
-
             <section class="our-process">
               <h2> Our process </h2>
-              <p>We opt for what we believe to be the safest and most effective <em>long-term</em> solution: <a href="https://dochub.clackamas.us/documents/drupal/ad9e796c-87d8-484e-ad9c-f464e5fef7f9" target="_blank">sodium bicarbonate</a>.</p>
+              <ol>
+                <li>Before applying a moss treatment, we strongly recommend <a href="roof-and-gutter-cleaning.html">blowing debris off the roof and cleaning your gutters and downspouts</a>. Applying the treatment to an otherwise debris-free surface will maximize effectiveness.</li>
+                <li>Once the roof is clean, we apply lines of <a href="https://dochub.clackamas.us/documents/drupal/ad9e796c-87d8-484e-ad9c-f464e5fef7f9" target="_blank">sodium bicarbonate</a> (baking soda) to the ridgeline and at regular intervals down the entire field of the roof.</li>
+                <li>Over time, baking soda will change the pH (acidity) of the roof, <em>gradually</em> killing existing moss and preventing future growth.</li>
+                <li><strong>Moss prevention requires ongoing maintenance.</strong> Depending on how much moss there is, several treatments may be required before all of the existing moss dies off.</li>
+                <li>After the existing moss dies (a process that takes several weeks to a few months), it will become brittle and will easily come off the roof during the next <a href="roof-and-gutter-cleaning.html">roof cleaning service</a> without the need for forcible removal.</li>
+              </ol>
 
-              <img src="images/roof-treated.jpg" alt="" class="wrapped-img">
-
-              <p>Sodium bicarbonate, otherwise known as baking soda, kills moss and prevents future growth by altering the pH of the roof surface. Baking soda won't remove the moss all at once. After application, existing moss will start to die and the altered pH will prevent further growth. If the moss is extensive, it will take multiple treatments to completely erradicate. </p>
-              
-              <p>Some companies opt for a more aggressive approach involving brushes, pressure washers, or other tools to mechanically remove the moss - but this won't prevent future growth and can easily damage the shingles and void your roof warranty. Using harsher chemicals (especially those containing zinc) are effective at killing moss but can cause health problems for the person applying the treatment and the run-off is harmful to pets, plants, and wildlife. </p>
-
+              <p>*As a matter of policy, we do not use forcible moss removal methods or use any harsh chemicals. If you are looking for immediate and forcible removal of any visually noticeable moss, we encourage you to contact a company willing to take the associated risks to health and property.</p>
             </section>
+
+            <section>
+              <h2> Client Testimonials</h2>
+              <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+              <div class="elfsight-app-0b1fa711-9ab9-4a09-aa8c-d95d82508d44" data-elfsight-app-lazy></div>
+          </section>
 
             <!-- Frequently Asked Questions (SEO optimized to build authority) -->
             <section>
                 <h2>Frequently Asked Questions (FAQs)</h2>
+              
+                <h3> Is moss bad for my roof?</h3>
+                <p> Yes, moss is bad for your roof, especially over the long-term. If left to its own devices, moss can cause extensive damage to your home. Due to our climate here in the Pacific Northwest, moss grows rapidly on roof surfaces. If left unchecked, moss will send spores underneath the roof shingles, pushing them upwards and eventually causing leaks.</p>
+                
+                <h3> What's the best way to get moss of my roof?</h3>
+                <p>At SeaGlass, we opt for what we believe to be the safest and most effective <em>long-term</em> solution: <a href="https://dochub.clackamas.us/documents/drupal/ad9e796c-87d8-484e-ad9c-f464e5fef7f9" target="_blank">sodium bicarbonate</a>. Sodium bicarbonate, otherwise known as baking soda, kills moss and prevents future growth by altering the pH of the roof surface. Baking soda won't remove the moss all at once. After application, existing moss will start to die and the altered pH will prevent further growth. If the moss is extensive, it will take multiple treatments to completely eradicate. </p>
+                <p>Some companies opt for a more aggressive approach involving brushes, pressure washers, or other tools to mechanically remove the moss - but this won't prevent future growth and can easily damage the shingles and void your roof warranty. Using harsher chemicals (especially those containing zinc) are effective at killing moss but can cause health problems for the person applying the treatment and the run-off is harmful to pets, plants, and wildlife. </p>
+
+              <!-- <img src="images/roof-treated.jpg" alt="" class="wrapped-img"> -->
+
               
                 <h3>Can I treat roof moss myself?</h3>
                 
                 <p>When it comes to moss removal and moss treatment, we strongly recommend that you leave it to the professionals. To safely apply a moss treatment to any roof, you need training and experience as well as specialized equipment (e.g., work boots with appropriate tread, a safety harness and rope, ladders, ladder stand-offs, ladder stabilizers). Due to the equipment needed and the risk involved, it is much faster, safer, and more cost-effective to hire a licensed and insured professional. In the USA alone, <a href="https://blogs.cdc.gov/niosh-science-blog/2017/03/13/ladder-safety-month/#:~:text=March%20is%20the%20first%2Dever,2%20from%20ladder%2Drelated%20injuries." target="_blank"> over half a million people</a> are admitted to the emergency room every year for ladder related injuries.</p>
             </section>
 
-            <section>
-              <h2>Client Testimonials</h2>
-              <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-              <script src="https://static.elfsight.com/platform/platform.js" async></script>
-              <div class="elfsight-app-dd37e448-f51b-4f67-9e2e-844d3d7fc97c" data-elfsight-app-lazy></div>
-            </section>
-            
         </main>
         
-        <footer>
-          <!-- <div>
-            <img src="images/transparent-logo.svg" alt="">
-          </div> -->
-          <div class="footer-text">
-            <span>&copy; Copyright 2025 Reda Consulting</span>
-            <span> <a href="privacy-policy.html">Privacy Policy</a> | <a href="careers.html">Careers</a></span>
-        </footer>
+         <!-- Footer -->
+    <footer>
+      <!-- <div>
+        <img src="images/transparent-logo.svg" alt="">
+      </div> -->
+      <div class="footer-text">
+        <span>&copy; Copyright 2025 Reda Consulting</span>
+        <span> <a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="careers.html" style="color: white;">Careers</a></span>
+  </footer>
     </body>
 </html>

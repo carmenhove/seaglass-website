@@ -27,7 +27,7 @@
     <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
     <header>
       <div class="logo">
-        <img src="images/white-logo(150 x 200 px).svg" alt="Company Logo">
+        <img src="images/banner - (1200 x 400 px).svg" alt="Company Logo">
       </div>
   
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -52,32 +52,19 @@
     </header>
 
     <!-- JS for Navigation responsivity -->
-    <script>
-      function toggleMenu() {
-        document.getElementById('navMenu').classList.toggle('active');
-      }
-    
-      function toggleDropdown(event) {
-        const isMobile = window.innerWidth <= 600;
-        if (isMobile) {
-          event.preventDefault();
-          const parent = event.target.closest('.dropdown');
-          parent.classList.toggle('open');
-        }
-      }
-    </script>
+    <script src="nav.js"></script>
 
       <!-- Main content -->
       <main>
         <!-- Overview -->
-        <section class="overview-service-page" id="gutter-background">
+        <section class="overview">
             <h1>Roof and Gutter Cleaning</h1>
-            <p>Our services include removing debris from the roof surface, cleaning out the gutters, and clearing any clogged downspouts. We pay careful attention to clean-up and will leave your home looking better than when we arrived.</a></p>
+            <p>Your professional roof and gutter cleaning experts serving residential and commerical clients in Kitsap County.</a></p>
         </section>
 
         <!-- Free Estimates -->
         <section class="request-bid">
-          <h2>Contact us today for a <strong>free estimate!</strong></h2>
+          <p>Contact us today for a <strong>free estimate</strong></p>
           <div class="button-wrapper">
               <div class="button-group">
                   <button class="contact-button" type="button"><a href="tel:360-209-2125">(360) 209-2125</a></button>
@@ -86,8 +73,9 @@
           </div>
         </section>
     
+        <!-- Photos -->
         <section>
-            <div class="two-column-layout">
+            <div class="two-column-layout-stack">
                 <div class="two-column-layout" id="stacking">
                     <div>
                       <img src="images/roof-before.jpg" alt="">
@@ -113,20 +101,22 @@
         </section>
 
         <section class="our-process">
-            <h2> Our process </h2>
-            <ul>
-              <li>We use a gas-powered blower to blow off all the debris from the roof's surface.</li>
-              <li>We then clean out the gutters by hand (unless the debris is completely dry, at which point we use the blower).</li>
+            <h2> Our Process </h2>
+            <ol>
+              <li>We blow off all the debris from the roof's surface.</li>
+              <li>We clean out the gutters by hand (unless the debris is completely dry, then we'll use the blower).</li>
               <li>We check and clear all clogged downspouts.</li>
               <li>We clean up all debris from the ground, leaving your home looking better than when we arrived.</li>
-              <li>We always recommend following roof and gutter cleaning with a <a href="moss-removal.html">moss treatment.</a></li>
-            </ul>
+              <li>We always recommend following roof and gutter cleaning with a <strong><a href="moss-removal.html">moss treatment.</a></strong></li>
+            </ol>
         </section>
 
-        <section>
-            <h2>Client Testimonials</h2>
-            <p>Thank you to our fantastic clients for helping us win #1 best gutter cleaners in Bremerton in 2024 and 2025</p>
+        <section class="testimonials">
+          <h2>Client Testimonials</h2>
+          <p>Thanks to our amazing clients, we've won <a href="https://qualitybusinessawards.com/2025/the-best-Window-Cleaners-in-Bremerton-Washington/SeaGlass-Cleaning-Services-LLC" target="_blank"> #1 best gutter cleaners</a> in Bremerton two years in a row and maintain a 5-star rating on Google.</p>
             <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <!-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+            <div class="elfsight-app-0b1fa711-9ab9-4a09-aa8c-d95d82508d44" data-elfsight-app-lazy></div> -->
             <script src="https://static.elfsight.com/platform/platform.js" async></script>
             <div class="elfsight-app-dd37e448-f51b-4f67-9e2e-844d3d7fc97c" data-elfsight-app-lazy></div>
         </section>
@@ -153,23 +143,16 @@
             <p>We always recommend applying a moss treatment after having your roof and gutters cleaned. For more information, check out our <a href="moss-removal.html">moss removal services.</a></p>
         </section>
 
-        <section>
-          <h2>Client Testimonials</h2>
-          <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-          <script src="https://static.elfsight.com/platform/platform.js" async></script>
-          <div class="elfsight-app-dd37e448-f51b-4f67-9e2e-844d3d7fc97c" data-elfsight-app-lazy></div>
-        </section>
-        
       </main>
     
-        <!-- Footer -->
-      <footer>
+       <!-- Footer -->
+    <footer>
         <!-- <div>
           <img src="images/transparent-logo.svg" alt="">
         </div> -->
         <div class="footer-text">
           <span>&copy; Copyright 2025 Reda Consulting</span>
-          <span> <a href="privacy-policy.html">Privacy Policy</a> | <a href="careers.html">Careers</a></span>
-      </footer>
+          <span> <a href="privacy-policy.html" style="color: white;">Privacy Policy</a> | <a href="careers.html" style="color: white;">Careers</a></span>
+    </footer>
     </body>
 </html>
