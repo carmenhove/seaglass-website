@@ -39,6 +39,12 @@ section{
     margin-block: 0px;
 }
 
+.banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* UNORDERED LISTS */
 ul {
   padding-right: 1rem;
@@ -164,15 +170,25 @@ header {
 }
 
 /* HEADER 1 */
+
 h1 {
     /* background-color: #52555a; */
     padding-top: 1rem;
-    color:white;
+    color:black;
     font-size: 4rem;
     text-align: center;
     line-height: 1.1;
     /* margin-top: 0px;
     padding-top: 1.25rem; */
+}
+
+.inline-heading {
+  font-size: 2rem; /* adjust to your design */
+  font-weight: bold;
+}
+
+.inline-heading span {
+  font-weight: normal; /* makes the second part look like body text */
 }
 
 /* SUBSEQUENT HEADERS */
@@ -191,23 +207,33 @@ p, h3, h4 {
 }
 
 /* OVERVIEW CONTENT FOR INDEX PAGE */
-.overview{
-  background: #079e84;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), 
-    url('../images/desktop/background-image.webp');
-  background-size: cover;
-  background-position: center center;
-  background-position: no-repeat;
+/* .overview{ */
+  /* background-color: #4b4e52; */
+  /* color: white; */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)),  */
+    /* url('../images/KR_pics/highlights/Seaglass-116.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center center;  */
+  /* background-position: no-repeat; */
   /* background-blend-mode: multiply; */
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
+  /* padding-top: 1rem; */
+  /* padding-bottom: 1rem; */
+/* } */
 
 .overview a{
   color: white;
 }
 
-.overview p{
+.inline-heading{
+  background-color: #4b4e52;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.overview{
   background-color: #4b4e52;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -259,7 +285,8 @@ button{
   /* background-color: rgb(191, 224, 243); */
   color: black;
   text-align: center;
-  padding: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 1rem;
 }
 
 .request-bid p {
