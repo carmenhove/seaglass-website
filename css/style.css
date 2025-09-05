@@ -567,7 +567,23 @@ justify-content: space-between;
     width: 50vw;
     overflow: hidden; /* ensures rounded corners clip children */
   }
+
+  .main-info {
+    margin: 1rem;
+    background-color: #dfe7e6;
+    /* border: 2px solid black; */
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    color: #333;
+    overflow: hidden; /* ensures rounded corners clip children */
+    
+  }
   
+  .main-info p {
+    text-align: center;
+  }
+
+
   .moveable-div h2, #services-section h2,
   .service-areas h2, .testimonials h2 {
     margin: 0rem;
@@ -575,6 +591,15 @@ justify-content: space-between;
     background-color: #036981;
   }
   
+  .business-info{
+    font-size: 2rem;   /* relative to surrounding text */
+  }
+
+  .business-name {
+    font-size: 2rem;   /* relative to surrounding text */
+    font-weight: bold;  /* optional */
+  }
+
   .moveable-content {
     padding: 1rem;
   }
