@@ -29,6 +29,33 @@ body{
     /* max-width: 1440px; */
 }
 
+/* HEADERS */
+h1 {
+  /* background-color: #52555a; */
+  padding-top: 1rem;
+  color:black;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1.1;
+  /* margin-top: 0px;
+  padding-top: 1.25rem; */
+}
+
+/* SUBSEQUENT HEADERS */
+h2 {
+  background-color: #036981;
+  padding: 1.8rem;
+  color: white;
+  font-size: 1.75rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+p, h3, h4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /* IMAGES */
 img{
     max-inline-size: 100%;
@@ -39,15 +66,13 @@ section{
     margin-block: 0px;
 }
 
-.banner img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 /* UNORDERED LISTS */
 ul {
   padding-right: 1rem;
+}
+
+.service-areas ul {
+  list-style: none; 
 }
 
 ul li { padding: 5px 0px; }
@@ -58,6 +83,7 @@ ol li {
       
 }
 
+/* ----------------------------------------------------------------------------------------------------- */
 /* HEADER, LOGO AND NAVIGATION  */
 header {
   background-color: #333;
@@ -169,80 +195,8 @@ header {
   }
 }
 
-/* HEADER 1 */
-
-h1 {
-    /* background-color: #52555a; */
-    padding-top: 1rem;
-    color:black;
-    font-size: 4rem;
-    text-align: center;
-    line-height: 1.1;
-    /* margin-top: 0px;
-    padding-top: 1.25rem; */
-}
-
-.inline-heading {
-  font-size: 2rem; /* adjust to your design */
-  font-weight: bold;
-}
-
-.inline-heading span {
-  font-weight: normal; /* makes the second part look like body text */
-}
-
-/* SUBSEQUENT HEADERS */
-h2 {
-  background-color: #036981;
-  padding: 1.8rem;
-  color: white;
-  font-size: 1.75rem;
-  text-align: center;
-  line-height: 1.1;
-}
-
-p, h3, h4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* OVERVIEW CONTENT FOR INDEX PAGE */
-/* .overview{ */
-  /* background-color: #4b4e52; */
-  /* color: white; */
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)),  */
-    /* url('../images/KR_pics/highlights/Seaglass-116.jpg'); */
-  /* background-size: cover; */
-  /* background-position: center center;  */
-  /* background-position: no-repeat; */
-  /* background-blend-mode: multiply; */
-  /* padding-top: 1rem; */
-  /* padding-bottom: 1rem; */
-/* } */
-
-.overview a{
-  color: white;
-}
-
-.inline-heading{
-  background-color: #4b4e52;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.overview{
-  background-color: #4b4e52;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-}  
-
-/* REQUEST BID SECTION */
+/* ----------------------------------------------------------------------------------------------------- */
+/* * REQUEST BID SECTION */ 
 
 /* Buttons */
 .button-wrapper {
@@ -296,12 +250,84 @@ button{
   margin: 1rem; /* remove default margin */
 }
 
+/* ----------------------------------------------------------------------------------------------------- */
+/* INDEX PAGE */
+
+/* banner image */
+.banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-info {
+  margin: 1rem;
+  background-color: #dfe7e6;
+  /* border: 2px solid black; */
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  color: #333;
+  overflow: hidden; /* ensures rounded corners clip children */
+}
+
+.moveable-content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.moveable-content ul{
+  text-align: center;
+}
+
+#left-push ul{
+  text-align: left;
+}
+
+.business-info{
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.business-name{
+  margin-bottom: 1rem;
+  font-size: 1.75em;
+}
+
+/* LINKS for LNI website (make same color as rest of text) */
+#license {
+  color: black
+}
+
+/* SERVICE PAGES */
+
+.overview a{
+  color: white;
+}
+
+.inline-heading{
+  background-color: #4b4e52;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.overview{
+  background-color: #4b4e52;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}  
+
 .testimonials p{
   text-align: center;
 }
 
 /* TWO COLUMN LAYOUT */
-.two-column-layout {
+.two-column-layout, .three-column-layout {
   display: block; /* Default for smaller screens */
   margin-left: 2rem;
   margin-right: 2rem;
@@ -311,10 +337,45 @@ button{
   margin-bottom: 20px; /* Adjust as needed */
 }
 
+.three-column-layout > div{
+  margin-bottom: 20px; /* Adjust as needed */
+}
 
 /* SERVICE PAGES */
 .photos{
   margin-block: 2rem;
+}
+
+#combined {
+  display: flex;
+  flex-wrap: wrap;         /* stack on smaller screens */
+  gap: 1rem;
+  width: 100%;
+  align-items: stretch;    /* ensures all children have the same height */
+}
+
+#combined > div {
+  flex: 1 1 300px;         /* equal width, wrap at 300px */
+  display: flex;
+  flex-direction: column;  /* stack text above image */
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 400px;       /* optional: enforce minimum height */
+}
+
+#combined p {
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  background: #f9f9f9;
+  flex: 0 0 auto;          /* height based on content */
+}
+
+#combined img {
+  width: 100%;
+  flex: 1 0 auto;          /* let image fill remaining space */
+  object-fit: cover;       /* cover makes both images same visual size */
+  display: block;
 }
 
 
@@ -328,6 +389,16 @@ button{
   @media screen and (min-width: 700px) {
           display: grid;
           grid-template-columns: 1fr 1fr;
+      }
+}
+
+.three-column-layout-stack {
+  display: block; /* Default for smaller screens */
+  margin-top: 2rem;
+
+  @media screen and (min-width: 700px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
       }
 }
 
@@ -467,16 +538,12 @@ button{
     text-align: center;
 }   
 
-
-
 .our-process{
     @media screen and (min-width: 600px) {
         font-size: 1.25rem;
      }
 
 }
-
-  
 
 footer {
   background-color: #079e84;
@@ -523,6 +590,12 @@ justify-content: space-between;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+
+  .three-column-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -547,7 +620,7 @@ justify-content: space-between;
     gap: 0.5rem;
   }
 
-  #services-section, .service-areas, .testimonials{
+  #services-section, .service-areas, .testimonials, .our-process, .faq{
     margin: 1rem;
     background-color: #dfe7e6;
     /* border: 2px solid black; */
@@ -568,46 +641,16 @@ justify-content: space-between;
     overflow: hidden; /* ensures rounded corners clip children */
   }
 
-  .main-info {
-    margin: 1rem;
-    background-color: #dfe7e6;
-    /* border: 2px solid black; */
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-    color: #333;
-    overflow: hidden; /* ensures rounded corners clip children */
-    
-  }
-  
-  .main-info p {
-    text-align: center;
-  }
-
-
   .moveable-div h2, #services-section h2,
-  .service-areas h2, .testimonials h2 {
+  .service-areas h2, .testimonials h2, .our-process h2, .faq h2 {
     margin: 0rem;
     padding: 1.8rem 2rem;
     background-color: #036981;
-  }
-  
-  .business-info{
-    font-size: 2rem;   /* relative to surrounding text */
-  }
-
-  .business-name {
-    font-size: 2rem;   /* relative to surrounding text */
-    font-weight: bold;  /* optional */
-  }
-
-  .moveable-content {
-    padding: 1rem;
   }
 
   .moveable-div:hover {
     background-color: #d0d0d0; /* A darker shade */
   }
-
 }
 
 @media screen and (min-width: 666px) and (max-width: 1024px) {
@@ -623,6 +666,18 @@ justify-content: space-between;
     font-size: 1rem;  
   }
 }
+
+.main-info p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media (max-width: 666px) {
+  .main-info p {
+    font-size: 1.5rem; /* smaller font size */
+  }
+}
+
 
   /* h1 {
     font-size: 4rem;
@@ -685,3 +740,48 @@ justify-content: space-between;
     padding-left: 30px;
   }
 } */
+
+#window-header {
+  /* Background image with dark overlay */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../images/KR_pics/highlights/Seaglass-323.jpg') no-repeat center center;
+  background-size: cover;    /* makes image cover entire section */
+  color: white;              /* text color */
+  padding: 4rem 1rem;        /* space around content */
+  text-align: center;        /* center the text */
+}
+
+#window-h1{
+  color: white;
+}
+
+#roof-header {
+  /* Background image with dark overlay */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../images/KR_pics/highlights/Seaglass-225.jpg') no-repeat center center;
+  background-size: cover;    /* makes image cover entire section */
+  color: white;              /* text color */
+  padding: 4rem 1rem;        /* space around content */
+  text-align: center;        /* center the text */
+}
+
+#roof-h1{
+  color: white;
+}
+
+#moss-header {
+  /* Background image with dark overlay */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../images/KR_pics/highlights/Seaglass-225.jpg') no-repeat center center;
+  background-size: cover;    /* makes image cover entire section */
+  color: white;              /* text color */
+  padding: 4rem 1rem;        /* space around content */
+  text-align: center;        /* center the text */
+}
+
+#moss-h1{
+  color: white;
+}
