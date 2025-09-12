@@ -224,7 +224,7 @@ button{
   background-color: black; 
   border: none;
   border-radius: 10px;
-  padding: 2rem 2rem;
+  padding: 3rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -233,6 +233,7 @@ button{
 
 .contact-button a{
   color: white;
+  padding: 3rem;
 }
 
 .request-bid{
@@ -377,6 +378,11 @@ button{
   flex: 1 0 auto;          /* let image fill remaining space */
   object-fit: cover;       /* cover makes both images same visual size */
   display: block;
+}
+
+#combined a{
+  color:black;
+  text-decoration: none;
 }
 
 /* STACKING COLUMNS W PHOTOS */
