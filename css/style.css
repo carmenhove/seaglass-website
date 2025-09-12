@@ -8,7 +8,7 @@
 
 /* LINKS */
 a { 
-  color:blue;
+  color:black;
   text-decoration: none;
 } 
 
@@ -271,19 +271,6 @@ button{
   overflow: hidden; /* ensures rounded corners clip children */
 }
 
-.moveable-content {
-  padding: 1rem;
-  text-align: left;
-}
-
-.moveable-content ul{
-  text-align: center;
-}
-
-#left-push ul{
-  text-align: left;
-}
-
 .business-info{
   margin: 0;
   font-size: 1.5rem;
@@ -294,40 +281,30 @@ button{
   font-size: 2rem;
 }
 
+.moveable-content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.moveable-content ul{
+  text-align: left;
+}
+
+#left-push ul{
+  text-align: left;
+}
+
 /* LINKS for LNI website (make same color as rest of text) */
 #license {
   color: black
 }
 
 /* SERVICE PAGES */
-
 .overview a{
   color: white;
 }
 
-.inline-heading{
-  background-color: #4b4e52;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.overview{
-  background-color: #4b4e52;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-}  
-
-.testimonials p{
-  text-align: center;
-}
-
-/* TWO COLUMN LAYOUT */
+/* MULTI COLUMN LAYOUT */
 .two-column-layout, .three-column-layout {
   display: block; /* Default for smaller screens */
   margin-left: 2rem;
@@ -342,7 +319,6 @@ button{
   margin-bottom: 20px; /* Adjust as needed */
 }
 
-/* SERVICE PAGES */
 .photos{
   margin-block: 2rem;
 }
@@ -361,16 +337,17 @@ button{
   flex-direction: column;  /* stack text above image */
   border-radius: 10px;
   overflow: hidden;
-  min-height: 400px;       /* optional: enforce minimum height */
+  /* max-height: 400px; */
+  /* min-height: 400px;        */
 }
 
 #combined p {
   padding: 1rem;
   margin: 0;
-  text-align: center;
+  text-align: left;
   background-color: white;
   color: black;
-  flex: 0 0 auto;          /* height based on content */
+  flex: 0 0 auto;      /* height based on content */
 }
 
 #combined img {
@@ -383,28 +360,6 @@ button{
 #combined a{
   color:black;
   text-decoration: none;
-}
-
-/* STACKING COLUMNS W PHOTOS */
-
-.two-column-layout-stack {
-  display: block; /* Default for smaller screens */
-  margin-top: 2rem;
-
-  @media screen and (min-width: 700px) {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-      }
-}
-
-.three-column-layout-stack {
-  display: block; /* Default for smaller screens */
-  margin-top: 2rem;
-
-  @media screen and (min-width: 700px) {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-      }
 }
 
 #stacking{
@@ -512,6 +467,32 @@ button{
   overflow: hidden;
 }
 
+#contact-page{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/KR_pics/Seaglass-116\ copy.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
+}
+
+#privacy-policy{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/KR_pics/highlights/Seaglass-285.jpg');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
+}
+
+#privacy-policy h1{
+  color: white;
+}
+
 /* INDIVIDUAL SERVICE PAGES CSS */
 #window-background{
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/windows-main.webp');
@@ -589,13 +570,13 @@ justify-content: space-between;
 /* Default = 360 */
 /* 666, 768, 1024, 1300 */
 
-@media screen and (min-width: 1100px) {
+/* @media screen and (min-width: 1100px) {
   
   .overview{
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-}
+} */
 
 @media screen and (min-width: 400px) {
   .two-column-layout{
@@ -628,10 +609,6 @@ justify-content: space-between;
     column-count: 5;
   }
 
-  .moveable-container{
-    display: flex;
-    gap: 0.5rem;
-  }
 
   #services-section, .service-areas, .testimonials, .our-process, .faq{
     margin: 1rem;
@@ -643,16 +620,9 @@ justify-content: space-between;
     overflow: hidden; /* ensures rounded corners clip children */
   }
   
-  .moveable-div {
-    margin: 1rem;
-    background-color: #dfe7e6;
-    /* border: 2px solid black; */
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-    color: #333;
-    width: 50vw;
-    overflow: hidden; /* ensures rounded corners clip children */
-  }
+.faq p{
+  font-weight: normal;
+}
 
   .moveable-div h2, #services-section h2,
   .service-areas h2, .testimonials h2, .our-process h2, .faq h2 {
@@ -702,7 +672,7 @@ justify-content: space-between;
   text-align: center;        /* center the text */
 }
 
-#window-h1{
+#window-h1, #roof-h1, #moss-h1{
   color: white;
 }
 
@@ -710,15 +680,11 @@ justify-content: space-between;
   /* Background image with dark overlay */
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('../images/KR_pics/highlights/Seaglass-225.jpg') no-repeat center center;
+    url('../images/KR_pics/highlights/Seaglass-225.jpg') no-repeat center left;
   background-size: cover;    /* makes image cover entire section */
   color: white;              /* text color */
   padding: 4rem 1rem;        /* space around content */
   text-align: center;        /* center the text */
-}
-
-#roof-h1{
-  color: white;
 }
 
 #moss-header {
@@ -732,6 +698,54 @@ justify-content: space-between;
   text-align: center;        /* center the text */
 }
 
-#moss-h1{
+/* .inline-heading{
+  background-color: #4b4e52;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-}
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+} */
+
+/* .overview{
+  background-color: #4b4e52;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}   */
+
+/* .testimonials p{
+  text-align: center;
+} */
+/* 
+.moveable-div {
+  margin: 1rem;
+  background-color: #dfe7e6;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  color: #333;
+  width: 50vw;
+  overflow: hidden; 
+} */
+
+/* .two-column-layout-stack {
+  display: block; 
+  margin-top: 2rem;
+
+  @media screen and (min-width: 700px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+      }
+} */
+
+/* .three-column-layout-stack {
+  display: block; 
+  margin-top: 2rem;
+
+  @media screen and (min-width: 700px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+      }
+} */
