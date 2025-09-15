@@ -400,31 +400,31 @@ button{
   background-repeat: no-repeat;
   border-radius: 1rem;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
 }
 
 /* Individual background images */
 #windows {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('../images/desktop/cropped-windows-desktop.webp');
 }
 
 #roofs-gutters {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('../images/desktop/after-gutters-desktop.webp');
 }
 
 #moss-treatment {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('../images/desktop/roof-treated-desktop.webp');
 }
 
 #solar-panels {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('../images/desktop/after-solar-desktop.webp');
 }
 
@@ -592,30 +592,31 @@ justify-content: space-between;
 /* Specific backgrounds */
 #window-header {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/KR_pics/highlights/Seaglass-323.jpg');
 }
 
 #solar-header {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/desktop/after-solar-desktop.webp');
 }
 
 #roof-header {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/KR_pics/highlights/Seaglass-225.jpg');
 }
 
 #moss-header {
   background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/KR_pics/highlights/Seaglass-225.jpg');
 }
 
 .service-areas,
-.about-us {
+.about-us,
+.testimonials {
   background-color: white;
 }
 
