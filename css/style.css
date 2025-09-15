@@ -397,9 +397,7 @@ button{
 #windows,
 #roofs-gutters,
 #moss-treatment,
-#solar-panels,
-#contact-page,
-#privacy-page {
+#solar-panels {
   position: relative;
   width: 100%;
   height: 15rem;
@@ -434,20 +432,6 @@ button{
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('../images/desktop/after-solar-desktop.webp');
-}
-
-#crew-header,
-#privacy-page,
-#career-page {
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../images/KR_pics/Seaglass-180\ copy.webp');
-}
-
-#contact-page {
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-    url('../images/KR_pics/Seaglass-116\ copy.webp');
 }
 
 .our-process{
@@ -608,6 +592,15 @@ justify-content: space-between;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/KR_pics/highlights/Seaglass-225.jpg');
+}
+
+#crew-header,
+#privacy-page,
+#career-page,
+#contact-page {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/KR_pics/Seaglass-180\ copy.webp');
 }
 
 .service-areas,
