@@ -1,37 +1,464 @@
-/* Mobile styles */
+
+/* OPTIMIZED CODE */
+/* GLOBAL RESET & BASE */
+/* Use rem for scalable sizing (default = 16px) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: blue;
+  text-decoration: none;
+}
+
+/* HEADINGS */
+h1 {
+  padding-top: 1rem;
+  color: black;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+h2 {
+  background-color: #036981;
+  padding: 1.8rem;
+  color: white;
+  font-size: 1.75rem;
+  text-align: center;
+  line-height: 1.1;
+}
+
+p, h3, h4 {
+  padding: 0 1rem;
+}
+
+/* MEDIA ELEMENTS */
+img {
+  max-inline-size: 100%;
+}
+
+ul {
+  padding-right: 1rem;
+}
+.service-areas ul {
+  list-style: none;
+}
+ul li,
+ol li {
+  padding: 5px 0;
+}
+ol li {
+  padding-right: 1rem;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* HEADER, LOGO, NAVIGATION */
+header {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 70px;
+}
+@media screen and (min-width: 600px) {
+  .logo img {
+    height: 90px;
+  }
+}
+
+.primary-navigation {
+  display: flex;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.main-menu li {
+  position: relative;
+}
+.main-menu a {
+  color: white;
+  padding: 10px;
+  display: block;
+}
+.main-menu a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  min-width: 200px;
+  z-index: 10;
+}
+.dropdown-menu li a {
+  padding: 10px 15px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Desktop hover dropdown */
+@media (min-width: 601px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile nav */
 @media (max-width: 929px) {
-    .primary-navigation {
-      width: 100%;
-      flex-direction: column;
-      display: none;
-    }
-  
-    .primary-navigation.active {
-      display: flex;
-    }
-  
-    .main-menu {
-      flex-direction: column;
-      gap: 0;
-    }
-  
-    .main-menu li {
-      width: 100%;
-    }
-  
-    .dropdown-menu {
-      position: static;
-    }
-  
-    .dropdown-menu li a {
-      padding-left: 30px;
-    }
-  
-    .dropdown.open .dropdown-menu {
-      display: block;
-    }
-  
-    .menu-toggle {
-      display: block;
+  .primary-navigation {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+  .primary-navigation.active {
+    display: flex;
+  }
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+  .main-menu li {
+    width: 100%;
+  }
+  .dropdown-menu {
+    position: static;
+  }
+  .dropdown-menu li a {
+    padding-left: 30px;
+  }
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* BUTTONS */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.button-group button {
+  padding: 1.5rem;
+  font-size: inherit;
+  cursor: pointer;
+}
+button {
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 3rem;
+  text-align: center;
+  display: inline-block;
+  font-size: inherit;
+}
+.contact-button a {
+  color: white;
+  padding: 3rem;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* REQUEST BID */
+.request-bid {
+  color: black;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.request-bid p {
+  font-size: 1.75rem;
+  margin: 1rem;
+  padding: 1rem 0;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* INDEX PAGE */
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-info,
+#services-section,
+.service-areas,
+.testimonials,
+.our-process,
+.faq {
+  margin: 1rem;
+  background-color: #dfe7e6;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  color: #333;
+  overflow: hidden;
+}
+.business-info {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.business-name {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.moveable-content {
+  padding: 1rem;
+  text-align: left;
+}
+.moveable-content ul,
+#left-push ul {
+  text-align: left;
+}
+#license {
+  color: black;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* MULTI-COLUMN LAYOUT */
+.two-column-layout,
+.three-column-layout {
+  display: block;
+  margin: 0 2rem;
+}
+.two-column-layout > div,
+.three-column-layout > div {
+  margin-bottom: 20px;
+}
+.photos {
+  margin-block: 2rem;
+}
+#combined {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  align-items: stretch;
+}
+#combined > div {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#combined p {
+  padding: 1rem;
+  margin: 0;
+  text-align: left;
+  background-color: white;
+  color: black;
+  flex: 0 0 auto;
+}
+#combined img {
+  width: 100%;
+  flex: 1 0 auto;
+  object-fit: cover;
+  display: block;
+}
+#combined a {
+  color: black;
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* REUSABLE SERVICE BLOCKS */
+.service-block {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#windows { background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../images/desktop/cropped-windows-desktop.webp'); }
+#roofs-gutters { background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../images/desktop/after-gutters-desktop.webp'); background-position: center; }
+#moss-treatment { background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../images/desktop/roof-treated-desktop.webp'); }
+#solar-panels { background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../images/desktop/after-solar-desktop.webp'); }
+#contact-page { background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../images/KR_pics/Seaglass-116 copy.webp'); }
+#privacy-policy { background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('../images/KR_pics/highlights/Seaglass-285.jpg'); }
+#privacy-policy h1 { color: white; }
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* FOOTER */
+footer {
+  background-color: #079e84;
+  background-image: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)), url('../images/desktop/background-image.webp');
+  background-position: bottom;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+.footer-text {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.footer a,
+.footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* MEDIA QUERIES */
+@media screen and (min-width: 400px) {
+  .two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .three-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #services-section .two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .service-areas ul { column-count: 5; }
+  .faq p { font-weight: normal; }
+  .moveable-div h2, #services-section h2,
+  .service-areas h2, .testimonials h2,
+  .our-process h2, .faq h2 {
+    margin: 0;
+    padding: 1.8rem 2rem;
+    background-color: #036981;
+  }
+  .moveable-div:hover {
+    background-color: #d0d0d0;
+  }
+}
+@media screen and (min-width: 666px) and (max-width: 1024px) {
+  .service-areas ul {
+    column-count: 2;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 666px) {
+  .service-areas ul { font-size: 1rem; }
+  .main-info p { font-size: 1.5rem; }
+}
+
+
+/* #windows{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/desktop/cropped-windows-desktop.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
+  border-radius: 1rem; 
+  overflow: hidden;
+}
+
+#roofs-gutters{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/desktop/after-gutters-desktop.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
+  border-radius: 1rem; 
+  overflow: hidden;
+}
+
+#moss-treatment{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/desktop/roof-treated-desktop.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
+  border-radius: 1rem; 
+  overflow: hidden;
+}
+
+#solar-panels{
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+                    url('../images/desktop/after-solar-desktop.webp');
+  background-size: cover;
+  background-position: center;
+  background-position: no-repeat;
+  border-radius: 1rem; 
+  overflow: hidden;
+} */
+
+/* #stacking{
+  @media screen and (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+} */
+/* 
+.left-column{
+  justify-items: center;
+
+  @media screen and (min-width: 600px) {
+      justify-self: end;
+      text-align: right;
     }
   }
+
+  .right-column{
+    justify-items: center;
+
+    @media screen and (min-width: 600px) {
+        justify-self: start;
+        text-align: left;
+      }
+} */

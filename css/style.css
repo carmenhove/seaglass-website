@@ -7,38 +7,32 @@
 }
 
 /* LINKS */
-a { 
-  color:black;
+a {
+  color: black;
   text-decoration: none;
-} 
+}
 
-a:visited { text-decoration: none; color:blue; }
-a:hover { text-decoration: none; color:blue; }
-a:focus { text-decoration: none; color:blue; }
-a:hover, a:active { text-decoration: none; color:blue }
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
 
 /* BODY */
 body{
     background-color: #ffffff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* padding: 2rem; */
     font-size: 1.25rem;
-    /* Use ratio */
     line-height: 1.5;
-    /* letter-spacing: 0.05rem; */
-    /* max-width: 1440px; */
 }
 
 /* HEADERS */
 h1 {
-  /* background-color: #52555a; */
   padding-top: 1rem;
   color:black;
   font-size: 4rem;
   text-align: center;
   line-height: 1.1;
-  /* margin-top: 0px;
-  padding-top: 1.25rem; */
 }
 
 /* SUBSEQUENT HEADERS */
@@ -54,6 +48,14 @@ h2 {
 p, h3, h4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* Headings */
+#window-h1,
+ #roof-h1, 
+ #moss-h1, 
+ #solar-h1 {
+  color: white;
 }
 
 /* IMAGES */
@@ -202,7 +204,7 @@ header {
 .button-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 1rem; /* adjust as needed */
+  margin-top: 1rem; 
   margin-bottom: 1rem;
 }
 
@@ -248,7 +250,7 @@ button{
   font-size: 1.75rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  margin: 1rem; /* remove default margin */
+  margin: 1rem;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -268,7 +270,7 @@ button{
   border-radius: 12px;
   transition: background-color 0.3s ease;
   color: #333;
-  overflow: hidden; /* ensures rounded corners clip children */
+  overflow: hidden;
 }
 
 .business-info{
@@ -305,17 +307,15 @@ button{
 }
 
 /* MULTI COLUMN LAYOUT */
-.two-column-layout, .three-column-layout {
+.two-column-layout, 
+.three-column-layout {
   display: block; /* Default for smaller screens */
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.two-column-layout > div {
-  margin-bottom: 20px; /* Adjust as needed */
-}
-
-.three-column-layout > div{
+.two-column-layout > div,
+.three-column-layout > div {
   margin-bottom: 20px; /* Adjust as needed */
 }
 
@@ -325,35 +325,33 @@ button{
 
 #combined {
   display: flex;
-  flex-wrap: wrap;         /* stack on smaller screens */
+  flex-wrap: wrap;        
   gap: 1rem;
   width: 100%;
-  align-items: stretch;    /* ensures all children have the same height */
+  align-items: stretch;   
 }
 
 #combined > div {
-  flex: 1 1 300px;         /* equal width, wrap at 300px */
+  flex: 1 1 300px;        
   display: flex;
-  flex-direction: column;  /* stack text above image */
+  flex-direction: column;  
   border-radius: 10px;
   overflow: hidden;
-  /* max-height: 400px; */
-  /* min-height: 400px;        */
 }
 
 #combined p {
   padding: 1rem;
   margin: 0;
   text-align: left;
-  background-color: white;
+  background-color: #d8e7e4;
   color: black;
-  flex: 0 0 auto;      /* height based on content */
+  flex: 0 0 auto; 
 }
 
 #combined img {
   width: 100%;
-  flex: 1 0 auto;          /* let image fill remaining space */
-  object-fit: cover;       /* cover makes both images same visual size */
+  flex: 1 0 auto;         
+  object-fit: cover;       
   display: block;
 }
 
@@ -362,40 +360,14 @@ button{
   text-decoration: none;
 }
 
-#stacking{
-
-  @media screen and (max-width: 600px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-}
-}
-
-.left-column{
-  justify-items: center;
-
-  @media screen and (min-width: 600px) {
-      justify-self: end; /* Right-align content in the left column */
-      text-align: right;
-    }
-  }
-
-  .right-column{
-    justify-items: center;
-
-    @media screen and (min-width: 600px) {
-        justify-self: start; /* Right-align content in the left column */
-        text-align: left;
-      }
-}
-
 .wrapped-img {
-  float: left; /* or right */
-  margin: 10px 30px 30px 30px; /* space around the image */
-  width: 250px; /* adjust as needed */
+  float: left;
+  margin: 10px 30px 30px 30px; 
+  width: 250px;
 }
 
-.privacy-overview, #join-our-team{
+.privacy-overview, 
+#join-our-team{
   margin: 0px;
 }
 
@@ -415,56 +387,45 @@ button{
     color: #ffffff;
 }
 
-#windows{
+/* Shared styles */
+#windows,
+#roofs-gutters,
+#moss-treatment,
+#solar-panels {
   position: relative;
   width: 100%;
   height: 15rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                    url('../images/desktop/cropped-windows-desktop.webp');
   background-size: cover;
   background-position: center;
-  background-position: no-repeat;
-  border-radius: 1rem; /* <-- rounds corners */
+  background-repeat: no-repeat;
+  border-radius: 1rem;
   overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
 }
 
-#roofs-gutters{
-  position: relative;
-  width: 100%;
-  height: 15rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                    url('../images/desktop/after-gutters-desktop.webp');
-  background-size: cover;
-  background-position: center;
-  background-position: no-repeat;
-  border-radius: 1rem; /* <-- rounds corners */
-  overflow: hidden;
+/* Individual background images */
+#windows {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../images/desktop/cropped-windows-desktop.webp');
 }
 
-#moss-treatment{
-  position: relative;
-  width: 100%;
-  height: 15rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                    url('../images/desktop/roof-treated-desktop.webp');
-  background-size: cover;
-  background-position: center;
-  background-position: no-repeat;
-  border-radius: 1rem; /* <-- rounds corners */
-  overflow: hidden;
+#roofs-gutters {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../images/desktop/after-gutters-desktop.webp');
 }
 
-#solar-panels{
-  position: relative;
-  width: 100%;
-  height: 15rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                    url('../images/desktop/after-solar-desktop.webp');
-  background-size: cover;
-  background-position: center;
-  background-position: no-repeat;
-  border-radius: 1rem; /* <-- rounds corners */
-  overflow: hidden;
+#moss-treatment {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../images/desktop/roof-treated-desktop.webp');
+}
+
+#solar-panels {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('../images/desktop/after-solar-desktop.webp');
 }
 
 #contact-page{
@@ -493,50 +454,10 @@ button{
   color: white;
 }
 
-/* INDIVIDUAL SERVICE PAGES CSS */
-#window-background{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/windows-main.webp');
-}
-
-#gutter-background{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/after-gutters.jpg');
-}
-
-#moss-background{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/moss-compressed.jpg');
-}
-
-#solar-background{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/before-solar-canva.jpg');
-}
-
-.overview-service-page{
-    color: #ffffff;
-    height: 600px;
-    background-size: cover;
-    background-position: top;
-    background-position: no-repeat;
-    margin-block: 0px;
-
-    @media screen and (min-width: 600px) {
-       height: 500px;
-       font-size: 1.75rem;
-    }
-}
-
-.overview-service-page p{
-    background-color: #4b4e52;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 40px;
-    text-align: center;
-}   
-
 .our-process{
     @media screen and (min-width: 600px) {
         font-size: 1.25rem;
      }
-
 }
 
 footer {
@@ -578,6 +499,7 @@ justify-content: space-between;
   }
 } */
 
+/* AT 400PX */
 @media screen and (min-width: 400px) {
   .two-column-layout{
     display: grid;
@@ -592,6 +514,7 @@ justify-content: space-between;
   }
 }
 
+/* AT 1025PX */
 @media screen and (min-width: 1025px) {
   
   #services-section .two-column-layout{
@@ -600,42 +523,48 @@ justify-content: space-between;
     gap: 1rem;
   }
 
-  /* .service-areas .two-column-layout{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  } */
-
   .service-areas ul{
     column-count: 5;
   }
 
 
-  #services-section, .service-areas, .testimonials, .our-process, .faq{
+  #services-section, .service-areas, .testimonials, .our-process, .about-us, .faq{
     margin: 1rem;
-    background-color: #dfe7e6;
+    background-color: #e3f3ef;
+    /* background-color: #dfe7e6; */
     /* border: 2px solid black; */
     border-radius: 12px;
     transition: background-color 0.3s ease;
     color: #333;
     overflow: hidden; /* ensures rounded corners clip children */
   }
+}
   
 .faq p{
   font-weight: normal;
 }
 
-  .moveable-div h2, #services-section h2,
-  .service-areas h2, .testimonials h2, .our-process h2, .faq h2 {
+.moveable-div h2, 
+#services-section h2,
+.service-areas h2, 
+.testimonials h2, 
+.our-process h2, 
+.faq h2,
+.about-us h2 {
     margin: 0rem;
     padding: 1.8rem 2rem;
     background-color: #036981;
   }
 
-  .moveable-div:hover {
-    background-color: #d0d0d0; /* A darker shade */
+  .main-info p {
+    text-align: center;
+    font-size: 2rem;
   }
-}
 
+  .about-us-subdiv{
+    background-color: #d5dcdb;
+  }
+  
 @media screen and (min-width: 666px) and (max-width: 1024px) {
   .service-areas ul{
     column-count: 2;
@@ -644,108 +573,44 @@ justify-content: space-between;
   
 }
 
-@media  screen and (max-width: 666px) {
-  .service-areas ul{
-    font-size: 1rem;  
-  }
-}
-
-.main-info p {
-  text-align: center;
-  font-size: 2rem;
-}
-
 @media (max-width: 666px) {
   .main-info p {
     font-size: 1.5rem; /* smaller font size */
   }
 }
 
-#window-header {
-  /* Background image with dark overlay */
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('../images/KR_pics/highlights/Seaglass-323.jpg') no-repeat center center;
-  background-size: cover;    /* makes image cover entire section */
-  color: white;              /* text color */
-  padding: 4rem 1rem;        /* space around content */
-  text-align: center;        /* center the text */
+/* Shared styles for all header sections */
+.overview {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
 }
 
-#window-h1, #roof-h1, #moss-h1{
-  color: white;
+/* Specific backgrounds */
+#window-header {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/KR_pics/highlights/Seaglass-323.jpg');
+}
+
+#solar-header {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/desktop/after-solar-desktop.webp');
 }
 
 #roof-header {
-  /* Background image with dark overlay */
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('../images/KR_pics/highlights/Seaglass-225.jpg') no-repeat center left;
-  background-size: cover;    /* makes image cover entire section */
-  color: white;              /* text color */
-  padding: 4rem 1rem;        /* space around content */
-  text-align: center;        /* center the text */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/KR_pics/highlights/Seaglass-225.jpg');
 }
 
 #moss-header {
-  /* Background image with dark overlay */
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url('../images/KR_pics/highlights/Seaglass-225.jpg') no-repeat center center;
-  background-size: cover;    /* makes image cover entire section */
-  color: white;              /* text color */
-  padding: 4rem 1rem;        /* space around content */
-  text-align: center;        /* center the text */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/KR_pics/highlights/Seaglass-225.jpg');
 }
 
-/* .inline-heading{
-  background-color: #4b4e52;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-} */
-
-/* .overview{
-  background-color: #4b4e52;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-}   */
-
-/* .testimonials p{
-  text-align: center;
-} */
-/* 
-.moveable-div {
-  margin: 1rem;
-  background-color: #dfe7e6;
-  border-radius: 12px;
-  transition: background-color 0.3s ease;
-  color: #333;
-  width: 50vw;
-  overflow: hidden; 
-} */
-
-/* .two-column-layout-stack {
-  display: block; 
-  margin-top: 2rem;
-
-  @media screen and (min-width: 700px) {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-      }
-} */
-
-/* .three-column-layout-stack {
-  display: block; 
-  margin-top: 2rem;
-
-  @media screen and (min-width: 700px) {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-      }
-} */
