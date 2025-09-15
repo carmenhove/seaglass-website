@@ -54,7 +54,10 @@ p, h3, h4 {
 #window-h1,
  #roof-h1, 
  #moss-h1, 
- #solar-h1 {
+ #solar-h1,
+ #crew-h1,
+ #privacy-h1,
+ #career-h1 {
   color: white;
 }
 
@@ -325,39 +328,42 @@ button{
 
 #combined {
   display: flex;
-  flex-wrap: wrap;        
+  flex-wrap: wrap;        /* allows wrapping on smaller screens */
   gap: 1rem;
   width: 100%;
-  align-items: stretch;   
+  align-items: stretch;   /* ensures children stretch to same height */
 }
 
 #combined > div {
-  flex: 1 1 300px;        
+  flex: 1 1 300px;        /* grow, shrink, base width */
   display: flex;
   flex-direction: column;  
   border-radius: 10px;
   overflow: hidden;
 }
 
-#combined p {
-  padding: 1rem;
-  margin: 0;
-  text-align: left;
-  background-color: #d8e7e4;
-  color: black;
-  flex: 0 0 auto; 
-}
-
+/* Images inside divs */
 #combined img {
   width: 100%;
-  flex: 1 0 auto;         
-  object-fit: cover;       
+  flex: 1 0 auto;         /* allow image to expand to fill remaining height */
+  object-fit: cover;
   display: block;
 }
 
-#combined a{
-  color:black;
-  text-decoration: none;
+/* Paragraph styling */
+#combined p {
+  padding: 1rem;
+  margin: 0;
+  background-color: #d8e7e4;
+  color: black;
+  flex: 0 0 auto;         /* text takes only needed space */
+}
+
+/* On smaller screens, move the "big" div to the top */
+@media (max-width: 600px) {
+  #top-pic {
+    order: -1; /* moves it to the top */
+  }
 }
 
 .wrapped-img {
@@ -391,7 +397,9 @@ button{
 #windows,
 #roofs-gutters,
 #moss-treatment,
-#solar-panels {
+#solar-panels,
+#contact-page,
+#privacy-page {
   position: relative;
   width: 100%;
   height: 15rem;
@@ -428,30 +436,18 @@ button{
     url('../images/desktop/after-solar-desktop.webp');
 }
 
-#contact-page{
-  position: relative;
-  width: 100%;
-  height: 15rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                    url('../images/KR_pics/Seaglass-116\ copy.webp');
-  background-size: cover;
-  background-position: center;
-  background-position: no-repeat;
+#crew-header,
+#privacy-page,
+#career-page {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/KR_pics/Seaglass-180\ copy.webp');
 }
 
-#privacy-policy{
-  position: relative;
-  width: 100%;
-  height: 15rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
-                    url('../images/KR_pics/highlights/Seaglass-285.jpg');
-  background-size: cover;
-  background-position: center;
-  background-position: no-repeat;
-}
-
-#privacy-policy h1{
-  color: white;
+#contact-page {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), 
+    url('../images/KR_pics/Seaglass-116\ copy.webp');
 }
 
 .our-process{
