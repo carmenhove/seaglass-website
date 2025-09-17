@@ -222,6 +222,7 @@ header {
   padding: 1.5rem 1.5rem;
   font-size: inherit;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 button{
@@ -234,6 +235,7 @@ button{
   text-decoration: none;
   display: inline-block;
   font-size: inherit;
+  white-space: nowrap;
 }
 
 .contact-button a{
