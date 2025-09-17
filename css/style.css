@@ -318,6 +318,10 @@ button{
   color: blue;
 }
 
+.service-title a{
+  font-weight: normal;
+}
+
 /* SERVICE PAGES */
 .overview a{
   color: white;
