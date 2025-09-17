@@ -10,6 +10,10 @@
 a {
   color: black;
   text-decoration: none;
+  /* font-weight: bold; */
+}
+
+.faq a{
   font-weight: bold;
 }
 
