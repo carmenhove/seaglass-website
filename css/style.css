@@ -310,7 +310,7 @@ button{
 
 /* LINKS for LNI website (make same color as rest of text) */
 #license {
-  color: black;
+  color: blue;
   font-weight: normal;
 }
 
@@ -318,9 +318,9 @@ button{
   color: blue;
 }
 
-.service-title a{
+/* .service-title a{
   font-weight: normal;
-}
+} */
 
 /* SERVICE PAGES */
 .overview a{
