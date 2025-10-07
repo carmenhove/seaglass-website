@@ -4,29 +4,30 @@
 
 <!-- html is the root element, best practice is to specify language -->
 <html lang="en">
-    <!-- head contains meta data, <head> primarily holds information for machine processing, not human-readability.  -->
-    <head>
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16679914847"></script>
-      <script>
+  <head>
+    <!-- sets the character coding -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Thank you</title>
+    <link rel="icon" href="images/logo_white.svg" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet" />
+  
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16679914847"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'AW-16679914847');
-      </script>
-      <!-- sets the character coding -->
-      <meta charset="utf-8"/>
-      <!-- "user-scalable=no means the user can't zoom, not usually appropriate" -->
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <!-- document title -->
-      <title> Thank you </title>
-      <link rel="icon" href="images/logo_white.svg" type="image/x-icon">
-      <!-- set the base html -->
-        <!-- <base href="https://www.seaglasscleaningservices.com"> -->
-        <!-- link to css file for formating -->
-      <link href="css/style.css" rel="stylesheet" />
-    </head>
+  
+      // Fire conversion event
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16679914847/mernCJmN8qgbEN-azZE-'
+      });
+    </script>
+  </head>
+  
 
     <!-- Because the navigation is human-visible information, it should go in header<> rather than head<> -->
     <body>
