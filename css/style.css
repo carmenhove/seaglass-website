@@ -419,15 +419,50 @@ button{
   position: relative;
   width: 100%;
   height: 15rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /*background-size: cover; */
+  /*background-position: center;*/
+ /* background-repeat: no-repeat;*/
   border-radius: 1rem;
   overflow: hidden;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
 }
 
+/* SERVICE CARDS (image-based, not background-image anymore) */
+.service-background {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Make the <img> behave like a background */
+.service-background img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark overlay for readability */
+.service-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Title sits on top of image */
+.service-background .service-title {
+  position: relative;
+  z-index: 1;
+}
+
 /* Individual background images */
+
+/*
 #windows {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -451,6 +486,8 @@ button{
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('../images/desktop/after-solar-desktop.webp');
 }
+
+*/
 
 .our-process{
     @media screen and (min-width: 600px) {
