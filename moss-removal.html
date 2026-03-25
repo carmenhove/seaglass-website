@@ -116,7 +116,16 @@
       <section class="photos">
         <div class="three-column-layout">
           <div>
-            <img src="images/desktop/moss-desktop.webp" alt="Moss growing on a roof.">
+            <img 
+            src="images/desktop/moss-desktop.webp"
+            srcset="
+            images/small/moss-desktop.webp 480w,
+            images/desktop/moss-desktop.webp 800w
+            "
+            sizes="(max-width: 600px) 100vw, 33vw"
+            alt="Moss growing on a roof."
+            loading="lazy"
+            >
             <!-- <figcaption>Traditional nose-to-the-glass cleaning.</figcaption> -->
           </div>  
           <div>
@@ -124,7 +133,16 @@
             <!-- <figcaption>Before roof and window cleaning.</figcaption> -->
           </div>
           <div>
-            <img src="images/KR_pics/resized-moss.jpg" alt="A moss treatment.">
+            <img 
+            src="images/desktop/resized-moss.webp"
+            srcset="
+            images/small/resized-moss.webp 480w,
+            images/desktop/resized-moss.webp 800w
+            "
+            sizes="(max-width: 600px) 100vw, 33vw"
+            alt="A roof moss treatment."
+            loading="lazy"
+            >
             <!-- <figcaption>Sill wipedown.</figcaption> -->
           </div>
         </div>
