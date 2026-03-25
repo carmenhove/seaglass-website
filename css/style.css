@@ -460,6 +460,11 @@ button{
   z-index: 1;
 }
 
+.centered-image {
+  display: block;
+  margin: 0 auto;
+}
+
 /* Individual background images */
 
 /*
